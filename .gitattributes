@@ -1,0 +1,43 @@
+# Default
+* text=auto
+
+# Source code, Commit LF Checkout system-specific convert spaces->tabs
+*.boo					text filter=tabspace
+*.c						text filter=tabspace diff=cpp
+*.compute				text filter=tabspace				# Unity Compute Shader
+*.cpp					text filter=tabspace diff=cpp
+*.cs					text filter=tabspace diff=csharp
+*.java					text filter=tabspace diff=java
+*.js					text filter=tabspace
+*.shader				text filter=tabspace				# Unity Shader
+
+# Unity files, commit LF, checkout LF (these are YAML files, so diff them like normal text)
+# Set via Edit > Project Settings > Editor > Asset Serialization (Force Text)
+*.anim					text eol=lf							# Animation
+*.controller			text eol=lf							# Animation Controller
+*.cubemap				text eol=lf							# Cube Map
+*.flare					text eol=lf							# Lens Flare
+*.fontsettings			text eol=lf							# Custom Font
+*.guiskin				text eol=lf							# GUI Skin
+*.mask					text eol=lf							# Avatar Mask
+*.meta					text eol=lf							# Unity meta file
+*.mat					text eol=lf							# Material
+*.overrideController	text eol=lf							# Animator Override Controller
+*.physicMaterial		text eol=lf							# Physic Material
+*.physicsMaterial2D		text eol=lf							# Physics 2D Material
+*.prefab				text eol=lf							# Unity Prefab
+*.renderTexture			text eol=lf							# Render Texture
+*.unity					text eol=lf							# Unity Scene
+
+# Binary files
+*.dll					binary
+*.dylib					binary
+*.so					binary
+*.jar					binary
+
+*.mp3					binary
+*.ogg					binary
+*.wav					binary
+
+*.psd					binary
+

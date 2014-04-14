@@ -1,0 +1,15 @@
+/obj/
+/Temp/
+/Library/
+/Assets/Plugins/UnityVS*
+*.sln
+*.suo
+*.user
+*.userprefs
+*.vcproj
+*.csproj
+*.unityproj
+*.DotSettings
+esj.sav
+Thumbs.db
+.DS_Store
