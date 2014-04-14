@@ -14,6 +14,7 @@
 # Unity files, commit LF, checkout LF (these are YAML files, so diff them like normal text)
 # Set via Edit > Project Settings > Editor > Asset Serialization (Force Text)
 *.anim					text eol=lf							# Animation
+*.asset					text eol=lf							# Project settings file
 *.controller			text eol=lf							# Animation Controller
 *.cubemap				text eol=lf							# Cube Map
 *.flare					text eol=lf							# Lens Flare
