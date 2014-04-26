@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 public class Main : MonoBehaviour
 {
+	public static AudioManager audioManager = null;
 	void Awake()
 	{
-		
+		audioManager = new AudioManager();
 	}
+
 	// Use this for initialization
 	void Start()
 	{
@@ -17,5 +19,6 @@ public class Main : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		audioManager.Update();
 	}
 }
