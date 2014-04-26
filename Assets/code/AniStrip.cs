@@ -15,6 +15,8 @@ public class AniStrip : MonoBehaviour {
     public Material mat;
     public string texPropertyName;
 
+	public float nextFrame;
+
     public int cellWidth;
     public int cellHeight;
 
@@ -82,5 +84,17 @@ public class AniStrip : MonoBehaviour {
 		mat.SetTextureOffset(texPropertyName, new Vector2(col * scaleW, row * scaleH));
 
 		curFrame = frame;
+	}
+
+	public void Update()
+	{
+		int next = 0;
+		if (NumFrames > 0)
+			next = (int)nextFrame % NumFrames;
+
+		if (next != curFrame)
+		{
+			setFrame(next);
+		}
 	}
 }
