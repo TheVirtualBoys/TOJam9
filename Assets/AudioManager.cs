@@ -14,7 +14,7 @@ public class AudioManager
 	List<AudioSource> offsetSources = new List<AudioSource>();
 	float t                         = 0.0f;
 	float lastOffsetTime            = 0.0f;
-	const int maxOffsetDudes          = 1;
+	const int maxOffsetDudes          = 2;
 	const float maxTimeBetweenOffsets = 20.0f;
 	const float minTimeBetweenOffsets = 7.0f;
 	const float percentageChance      = 40.0f;
@@ -177,12 +177,17 @@ public class AudioManager
 		{
 			foreach (AudioSource source in offsetSources)
 			{
-				Tracks track = GetTrack(source);
-				source.pitch = 1.0f;
-				source.time  = trackPosition[(int)track];
-				offsetSources.Remove(source);
-				--numOffsetDudes[(int)track];
+				ReSyncSource(source);
 			}
 		}
+	}
+
+	public void ReSyncSource(AudioSource source)
+	{
+		source.pitch = 1.0f;
+		Tracks track = GetTrack(source);
+		source.time  = trackPosition[(int)track];
+		--numOffsetDudes[(int)track];
+		offsetSources.Remove(source);
 	}
 }
