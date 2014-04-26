@@ -145,10 +145,12 @@ public class AudioManager
 					if ((screwWithThisOne.timeSamples & 1) == 1)
 					{
 						screwWithThisOne.pitch += offset;
+						source.gameObject.GetComponent<Animator>().speed += offset;
 					}
 					else
 					{
 						screwWithThisOne.pitch -= offset;
+						source.gameObject.GetComponent<Animator>().speed -= offset;
 					}
 					Debug.Log("Offset " + source + " @" + offset);
 					offsetSources.Add(source);
@@ -169,6 +171,7 @@ public class AudioManager
 			{
 				if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i]);
 				source.pitch = 1.0f;
+				source.gameObject.GetComponent<Animator>().speed = 1.0f;
 				// do something with the animation
 			}
 		}
@@ -185,6 +188,7 @@ public class AudioManager
 	public void ReSyncSource(AudioSource source)
 	{
 		source.pitch = 1.0f;
+		source.gameObject.GetComponent<Animator>().speed = 1.0f;
 		Tracks track = GetTrack(source);
 		source.time  = trackPosition[(int)track];
 		--numOffsetDudes[(int)track];
