@@ -3,13 +3,13 @@ using System.Collections;
 
 public class SimpleSprite : MonoBehaviour
 {
-	MeshRenderer renderer = null;
+	//MeshRenderer renderer = null;
 	MeshFilter mesh = null;
 	
 	void Start()
 	{
-		renderer  = gameObject.AddComponent<MeshRenderer>();
-		renderer.material = SetMaterial();
+		//renderer  = gameObject.AddComponent<MeshRenderer>();
+		//renderer.material = SetMaterial();
 		mesh      = gameObject.AddComponent<MeshFilter>();// = mesh = new MeshFilter();
 		mesh.mesh = CreateQuad();
 	}
