@@ -123,6 +123,7 @@ GameObject:
   - 33: {fileID: 836521031}
   - 64: {fileID: 836521030}
   - 23: {fileID: 836521029}
+  - 95: {fileID: 836521033}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -182,6 +183,20 @@ Transform:
   m_LocalScale: {x: 320, y: 240, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!95 &836521033
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836521028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 414ed1dab6b97a64cb106e7b644082e4, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &895175736
 GameObject:
   m_ObjectHideFlags: 0
