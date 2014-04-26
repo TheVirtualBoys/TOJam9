@@ -62,6 +62,15 @@ public class AudioManager
 		return Tracks.TRACK_MAX;
 	}
 
+	AudioSource GetInSyncAudioSource(Tracks track)
+	{
+		foreach (AudioSource source in sources)
+		{
+			if (source.clip == tracks[(int)track]) return source;
+		}
+		return null;
+	}
+
 	public void CreateAudioSource(AudioSource source, Tracks track)
 	{
 		source.clip = tracks[(int)track];
@@ -187,9 +196,11 @@ public class AudioManager
 
 	public void ReSyncSource(AudioSource source)
 	{
-		source.pitch = 1.0f;
-		source.gameObject.GetComponent<Animator>().speed = 1.0f;
 		Tracks track = GetTrack(source);
+		GameObject sourceGO = source.gameObject;
+		source.pitch = 1.0f;
+		sourceGO.GetComponent<Animator>().speed = 1.0f;
+		sourceGO.GetComponent<AniStrip>().CurFrame = GetInSyncAudioSource(track).gameObject.GetComponent<AniStrip>().CurFrame;
 		source.time  = trackPosition[(int)track];
 		--numOffsetDudes[(int)track];
 		offsetSources.Remove(source);
