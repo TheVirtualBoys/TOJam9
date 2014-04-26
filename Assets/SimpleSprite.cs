@@ -8,7 +8,9 @@ public class SimpleSprite : MonoBehaviour
 	
 	void Start()
 	{
-		mesh = new MeshFilter();
+		renderer  = gameObject.AddComponent<MeshRenderer>();
+		renderer.material = SetMaterial();
+		mesh      = gameObject.AddComponent<MeshFilter>();// = mesh = new MeshFilter();
 		mesh.mesh = CreateQuad();
 	}
 
@@ -17,10 +19,10 @@ public class SimpleSprite : MonoBehaviour
 		Mesh mesh = new Mesh();
 
 		Vector3[] verts = new Vector3[] {
-			new Vector3(0, 0, 0),
-			new Vector3(1, 0, 0),
-			new Vector3(0, 1, 0),
-			new Vector3(1, 1, 0)
+			new Vector3(0.0f, 0.0f, 0.0f),
+			new Vector3(0.0f, 0.5f, 0.0f),
+			new Vector3(0.5f, 0.5f, 0.0f),
+			new Vector3(0.5f, 0.0f, 0.0f)
 		};
 
 		Vector2[] uvs = new Vector2[] {
@@ -32,16 +34,19 @@ public class SimpleSprite : MonoBehaviour
 
 		int[] tris = new int[] {
 			0, 1, 2,
-			2, 1, 3
+			2, 3, 0
 		};
 
-		mesh.vertices = verts;
-		mesh.uv = uvs;
+		mesh.vertices  = verts;
+		mesh.uv        = uvs;
 		mesh.triangles = tris;
+		mesh.RecalculateBounds();
+		mesh.RecalculateNormals();
 		return mesh;
 	}
 
-	void SetMaterial()
+	Material SetMaterial()
 	{
+		return new Material(Shader.Find("Diffuse"));
 	}
 }
