@@ -39,8 +39,9 @@ public class Main : MonoBehaviour
 			if (sources[i] == null || sources[i].clip == null) continue;
 			if (sources[i].time >= sources[i].clip.length)
 			{
-				Destroy(sources[i]);
-				sources[i] = null;
+				//Destroy(sources[i].clip);
+				sources[i].Stop();
+				sources[i].clip = null;
 				if (startedLevel == false)
 				{
 					StartLevel();
@@ -70,13 +71,13 @@ public class Main : MonoBehaviour
 			float volume = 0.0f;
 			switch ((AudioManager.Tracks)i)
 			{
-				case AudioManager.Tracks.TRACK_DRUM:    volume = 0.02f; break;
-				case AudioManager.Tracks.TRACK_FLUTE:   volume = 0.02f; break;
+				case AudioManager.Tracks.TRACK_DRUM: volume = 0.02f; break;
+				case AudioManager.Tracks.TRACK_FLUTE: volume = 0.02f; break;
 				case AudioManager.Tracks.TRACK_TRUMPET: volume = 0.02f; break;
-				case AudioManager.Tracks.TRACK_TUBA:    volume = 0.02f; break;
+				case AudioManager.Tracks.TRACK_TUBA: volume = 0.02f; break;
 			}
 			sources[i].volume = volume;
-			sources[i].loop   = false;
+			sources[i].loop = false;
 			sources[i].Play();
 		}
 	}
@@ -109,6 +110,28 @@ public class Main : MonoBehaviour
 		{
 			AniStrip ani = character.GetComponent<AniStrip>();
 			ani.running = running;
+		}
+	}
+
+	public void StartOutroMusic()
+	{
+		sources[0].clip = Resources.Load<AudioClip>("Drums_Out");
+		sources[1].clip = Resources.Load<AudioClip>("Tuba_Out");
+		sources[2].clip = Resources.Load<AudioClip>("Trumpet_Out");
+		sources[3].clip = Resources.Load<AudioClip>("Flute_Out");
+		for (int i = 0; i < (int)AudioManager.Tracks.TRACK_MAX; ++i)
+		{
+			float volume = 0.0f;
+			switch ((AudioManager.Tracks)i)
+			{
+				case AudioManager.Tracks.TRACK_DRUM: volume = 0.02f; break;
+				case AudioManager.Tracks.TRACK_FLUTE: volume = 0.02f; break;
+				case AudioManager.Tracks.TRACK_TRUMPET: volume = 0.02f; break;
+				case AudioManager.Tracks.TRACK_TUBA: volume = 0.02f; break;
+			}
+			sources[i].volume = volume;
+			sources[i].loop = false;
+			sources[i].Play();
 		}
 	}
 

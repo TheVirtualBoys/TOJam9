@@ -136,7 +136,7 @@ public class ScoreManager : MonoBehaviour {
 			ani.enabled = false;
 		}
 
-		CameraFade.StartAlphaFade(Color.black, false, 5.0f, 0f, () => { RestartScene(); });
+		CameraFade.StartAlphaFade(Color.black, false, 5.0f, 3f, () => { RestartScene(); });
 	}
 
 	private void playAnimation(GameObject character, bool running)
@@ -160,6 +160,6 @@ public class ScoreManager : MonoBehaviour {
 	private void RestartScene()
 	{
 		AudioScript.Reset();
-		Application.LoadLevel("Title");
+		Application.LoadLevel(0);
 	}
 }

@@ -266,4 +266,12 @@ public class AudioManager
 
 		scoreManager.onGotResync(sourceGO.GetInstanceID());
 	}
+
+	public void StopAllSounds()
+	{
+		foreach (AudioSource source in sources)
+		{
+			source.Stop();
+		}
+	}
 }

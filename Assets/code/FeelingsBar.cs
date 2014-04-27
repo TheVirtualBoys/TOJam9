@@ -11,8 +11,12 @@ public class FeelingsBar : MonoBehaviour {
 	public int level;
 	public int maxLevel;
 
+	public bool running;
+
 	// Update is called once per frame
 	void Update () {
+		if (!running) return;
+
 		if (filler.localScale.x != level && level >= 0 && level < maxLevel)
 		{
 			int localLevel = Mathf.Max(Mathf.Min(level, maxLevel), 0);
