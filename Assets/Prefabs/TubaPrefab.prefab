@@ -84,11 +84,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  numFrames: 8
+  numFrames: 10
   frameRate: 12
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
+  running: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

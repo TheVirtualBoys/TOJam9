@@ -43,6 +43,16 @@ public class ScoreManager : MonoBehaviour {
 				}
 			}
 
+			GameObject uiFeelings = GameObject.Find("UI_Feelings");
+			if (uiFeelings != null)
+			{
+				FeelingsBar fb = uiFeelings.GetComponent<FeelingsBar>();
+				if (fb != null)
+				{
+					fb.level = (int)((curLife / maxLife) * fb.maxLevel);
+				}
+			}
+
 			if (curLife <= 0)
 			{
 				gameOver();

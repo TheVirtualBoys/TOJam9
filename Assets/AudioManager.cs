@@ -243,10 +243,4 @@ public class AudioManager
 
 		scoreManager.onGotResync(sourceGO.GetInstanceID());
 	}
-
-	public void RemoveDesyncSource(AudioSource source)
-	{
-		Tracks track = GetTrack(source);
-
-	}
 }
