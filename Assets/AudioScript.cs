@@ -27,6 +27,11 @@ public class AudioScript : MonoBehaviour
 		}
 		SetActiveSource(AudioSources.SOURCE_ONE);
 		SetInstrument(track);
+		//Play();
+	}
+
+	public void Play()
+	{
 		source[activeSource].Play();
 	}
 
