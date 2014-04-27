@@ -27,34 +27,40 @@ public class SplashLogic : MonoBehaviour
 		t += Time.deltaTime;
 		if (isFading == false && (Input.anyKeyDown || (currentSplash < 2 && t >= timeBetweenSplash)))
 		{
+			//Debug.Log("--here");
+			isFading = true;
 			// tween it out
 			if (currentSplash < 2)
 			{
+				//Debug.Log("--here 2");
 				CameraFade.StartAlphaFade(Color.black, false, 3.0f, 0f, () => { TweenCallback(); });
 			}
 			else
 			{
+				//Debug.Log("--here 3");
 				CameraFade.StartAlphaFade(Color.black, false, 3.0f, 0f, () => { StartGame(); });
 			}
-			isFading = true;
 		}
 		else if (doneFade)
 		{
-			CameraFade.StartAlphaFade(Color.black, true, 3.0f, 0f, () => { TweenCallback2(); });
+			//Debug.Log("--here 4");
 			isFading = true;
-			t = 0.0f;
 			doneFade = false;
+			CameraFade.StartAlphaFade(Color.black, true, 3.0f, 0f, () => { TweenCallback2(); });
+			t = 0.0f;
 		}
 	}
 
 	void TweenCallback()
 	{
+		//Debug.Log("--here 5");
 		splashes[currentSplash++].SetActive(false);
 		doneFade = true;
 	}
 
 	void TweenCallback2()
 	{
+		//Debug.Log("--here 6");
 		t = 0.0f;
 		isFading = false;
 		doneFade = false;
