@@ -64,7 +64,7 @@ public class AudioManager
 	{
 		foreach (AudioSource source in sources)
 		{
-			if (source.clip == tracks[(int)track] && !offsetSources.Contains(source)) return source;
+			if (!offsetSources.Contains(source)) return source;
 		}
 		return null;
 	}
@@ -170,15 +170,44 @@ public class AudioManager
 			if (track == Tracks.TRACK_MAX) continue;
 
 			float trackLength = source.clip.length;
-
 			AudioSource inSyncAudioSource = GetInSyncAudioSource(track);
-			if (source.time >= (inSyncAudioSource.time + trackOffsetMax[(int)track]) || source.time <= (inSyncAudioSource.time - trackOffsetMax[(int)track]))
+			float diff = 0;
+			if ((diff = inSyncAudioSource.time + trackOffsetMax[(int)track] - trackLength) > 0.0f)
 			{
-				if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i]);
-				source.pitch = 1.0f;
-				source.gameObject.GetComponent<Animator>().speed = 1.0f;
-				// do something with the animation
+				if (source.time <= inSyncAudioSource.time - trackOffsetMax[(int)track] &&
+					source.time >= diff)
+				{
+					// reset it
+					if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i] + " (wrap high)");
+					source.pitch = 1.0f;
+					source.gameObject.GetComponent<Animator>().speed = 1.0f;
+				}
 			}
+			else if ((diff = inSyncAudioSource.time - trackOffsetMax[(int)track]) < 0.0f)
+			{
+				diff += trackLength;
+				if (source.time <= diff &&
+					source.time >= inSyncAudioSource.time + trackOffsetMax[(int)track])
+				{
+					// reset it
+					if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i] + " (wrap low)");
+					source.pitch = 1.0f;
+					source.gameObject.GetComponent<Animator>().speed = 1.0f;
+				}
+			}
+			else
+			{
+				if (source.time >= (inSyncAudioSource.time + trackOffsetMax[(int)track]) ||
+					source.time <= (inSyncAudioSource.time - trackOffsetMax[(int)track]))
+				{
+					if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i]);
+					source.pitch = 1.0f;
+					source.gameObject.GetComponent<Animator>().speed = 1.0f;
+					// do something with the animation
+				}
+			}
+
+
 		}
 
 		if (Input.GetKeyDown(KeyCode.Space))
