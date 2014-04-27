@@ -11,11 +11,8 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
-  - 61: {fileID: 6100000}
-  - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: DrummerPrefab
+  m_Name: LeaderPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.78034973, y: -30.5417862, z: 0}
+  m_LocalPosition: {x: -35.6015244, y: -30.0253639, z: 0}
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,7 +41,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
+  - {fileID: 2100000, guid: 933d71457b695514d94e96df84169dd3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -60,17 +57,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!61 &6100000
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,36 +68,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f276bbe29d69b42b4a866e3c787bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
+  mat: {fileID: 2100000, guid: 933d71457b695514d94e96df84169dd3, type: 2}
   texPropertyName: _MainTex
-  numFrames: 13
-  frameRate: 12
+  numFrames: 15
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  track: 1
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

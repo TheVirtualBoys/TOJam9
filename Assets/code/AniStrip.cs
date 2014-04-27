@@ -7,7 +7,7 @@ using System.Collections;
  * Sets up an animation strip that assumes each cell of the animation is the same size,
  * and the texture size is split evenly among all tiles horizontally and vertically.
  * 
- * Cell numbering is from bottom left to top right.
+ * Cell numbering is from top left to bottom right.
  * 
  */
 public class AniStrip : MonoBehaviour {
@@ -15,10 +15,16 @@ public class AniStrip : MonoBehaviour {
 	public Material mat;
 	public string texPropertyName;
 
-	public float nextFrame;
+	public int numFrames;
+
+	public float frameRate;
 
 	public int cellWidth;
 	public int cellHeight;
+
+	public float speedMultiplier;
+
+	public bool running;
 
 	private int numTilesWide;
 	private int numTilesHigh;
@@ -28,8 +34,13 @@ public class AniStrip : MonoBehaviour {
 
 	private int curFrame = 0;
 
+	private float dt;
+	private float timePerFrame;
+
 	void Awake()
 	{
+		running = false;
+
 		if (mat != null && mat.HasProperty(texPropertyName))
 		{
 			//need to clone the material so we have our own version
@@ -59,6 +70,9 @@ public class AniStrip : MonoBehaviour {
 
 		renderer.material = mat;
 
+		timePerFrame = 1f / frameRate;
+
+		speedMultiplier = 1f;
 	}
 
 	public int CurFrame
@@ -69,7 +83,13 @@ public class AniStrip : MonoBehaviour {
 
 	public int NumFrames
 	{
-		get { return numTilesWide * numTilesHigh; }
+		get { return numFrames; }
+	}
+
+	public float FrameOffsetTime
+	{
+		get { return dt; }
+		set { dt = value; }
 	}
 
 	public Material AniMaterial
@@ -79,22 +99,33 @@ public class AniStrip : MonoBehaviour {
 
 	protected void setFrame(int frame)
 	{
+		if (frame >= NumFrames)
+			frame = frame % NumFrames;
+
 		int col = frame % numTilesWide;
 		int row = frame / numTilesWide;
-		mat.SetTextureOffset(texPropertyName, new Vector2(col * scaleW, row * scaleH));
+		mat.SetTextureOffset(texPropertyName, new Vector2(col * scaleW, (numTilesHigh - row - 1) * scaleH));
 
 		curFrame = frame;
 	}
 
 	public void Update()
 	{
-		int next = 0;
-		if (NumFrames > 0)
-			next = (int)nextFrame % NumFrames;
-
-		if (next != curFrame)
+		if (running)
 		{
-			setFrame(next);
+			dt += Time.deltaTime * speedMultiplier;
+			int framesToAdvance = 0;
+			while (dt > timePerFrame)
+			{
+				dt -= timePerFrame;
+				framesToAdvance++;
+			}
+
+			if (framesToAdvance > 0)
+			{
+				//Debug.Log("advancing " + framesToAdvance);
+				setFrame(curFrame + framesToAdvance);
+			}
 		}
 	}
 }
