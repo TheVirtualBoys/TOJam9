@@ -31,8 +31,6 @@ public class NoteProgressBar : MonoBehaviour {
 
 			if (aniCompletion < percentComplete)
 			{
-				Debug.Log("ani: " + aniCompletion + ", %: " + percentComplete);
-
 				//for some reason the following animation is before the current % complete, so it must've looped, so consider % complete done now
 				percentComplete = 1;
 			}
