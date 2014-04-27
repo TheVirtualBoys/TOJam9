@@ -113,6 +113,10 @@ Prefab:
       propertyPath: m_Name
       value: Tuba4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
+      propertyPath: track
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
   m_RootGameObject: {fileID: 1949858579}
@@ -157,6 +161,10 @@ Prefab:
       propertyPath: m_Name
       value: Tuba2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
+      propertyPath: track
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
   m_RootGameObject: {fileID: 532312334}
@@ -200,6 +208,10 @@ Prefab:
     - target: {fileID: 100000, guid: 7115167b7af323d458276c5dec24c738, type: 2}
       propertyPath: m_Name
       value: Flute3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7115167b7af323d458276c5dec24c738, type: 2}
+      propertyPath: track
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7115167b7af323d458276c5dec24c738, type: 2}
@@ -342,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 1
+  track: 0
 --- !u!61 &203577429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -444,6 +456,10 @@ Prefab:
       propertyPath: m_Name
       value: Tuba3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
+      propertyPath: track
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
   m_RootGameObject: {fileID: 1835774107}
@@ -517,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 3
+  track: 2
 --- !u!114 &450788708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 0
+  track: 5
 --- !u!114 &493210701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 2
+  track: 1
 --- !u!114 &532312339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 2
+  track: 1
 --- !u!114 &566846974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,6 +1029,10 @@ Prefab:
     - target: {fileID: 100000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
       propertyPath: m_Name
       value: Drummer3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7, type: 2}
+      propertyPath: track
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
@@ -1125,7 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 1
+  track: 0
 --- !u!61 &579456810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1177,6 +1197,10 @@ Prefab:
       propertyPath: m_Name
       value: Clarinet2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
+      propertyPath: track
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
   m_RootGameObject: {fileID: 493210695}
@@ -1220,6 +1244,10 @@ Prefab:
     - target: {fileID: 100000, guid: 7115167b7af323d458276c5dec24c738, type: 2}
       propertyPath: m_Name
       value: Flute4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7115167b7af323d458276c5dec24c738, type: 2}
+      propertyPath: track
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7115167b7af323d458276c5dec24c738, type: 2}
@@ -1272,6 +1300,10 @@ Prefab:
     - target: {fileID: 100000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7, type: 2}
+      propertyPath: track
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
@@ -1384,7 +1416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 1
+  track: 0
 --- !u!61 &737164038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1465,7 +1497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 0
+  track: 5
 --- !u!114 &750404540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,7 +1898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 3
+  track: 2
 --- !u!114 &944131866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1955,6 +1987,10 @@ Prefab:
     - target: {fileID: 100000, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
       propertyPath: m_Name
       value: Clarinet4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
+      propertyPath: track
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
@@ -2079,7 +2115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 4
+  track: 3
 --- !u!114 &1100989916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2272,7 +2308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 3
+  track: 2
 --- !u!114 &1208171240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2585,7 +2621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 0
+  track: 5
 --- !u!114 &1389170152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2665,7 +2701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 100
   penaltyPointsPerSecond: 2
-  pointsForResync: .5
+  pointsForResync: 2
   curLife: 0
 --- !u!4 &1390441919
 Transform:
@@ -2864,7 +2900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 1
+  track: 0
 --- !u!61 &1466069749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2915,6 +2951,10 @@ Prefab:
     - target: {fileID: 100000, guid: 7115167b7af323d458276c5dec24c738, type: 2}
       propertyPath: m_Name
       value: Flute2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7115167b7af323d458276c5dec24c738, type: 2}
+      propertyPath: track
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7115167b7af323d458276c5dec24c738, type: 2}
@@ -2989,6 +3029,10 @@ Prefab:
     - target: {fileID: 100000, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
       propertyPath: m_Name
       value: Trumpet3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
+      propertyPath: track
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
@@ -3103,6 +3147,10 @@ Prefab:
     - target: {fileID: 100000, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
       propertyPath: m_Name
       value: Clarinet1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
+      propertyPath: track
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
@@ -3248,6 +3296,10 @@ Prefab:
       propertyPath: m_Name
       value: Flute1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7115167b7af323d458276c5dec24c738, type: 2}
+      propertyPath: track
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7115167b7af323d458276c5dec24c738, type: 2}
   m_RootGameObject: {fileID: 1787672435}
@@ -3352,6 +3404,10 @@ Prefab:
       propertyPath: m_Name
       value: Trumpet4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
+      propertyPath: track
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
   m_RootGameObject: {fileID: 944131860}
@@ -3396,6 +3452,10 @@ Prefab:
       propertyPath: m_Name
       value: Drummer2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7, type: 2}
+      propertyPath: track
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
   m_RootGameObject: {fileID: 203577421}
@@ -3439,6 +3499,10 @@ Prefab:
     - target: {fileID: 100000, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
       propertyPath: m_Name
       value: Tuba1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
+      propertyPath: track
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d60ed475971483f40b8dff5a682f7c66, type: 2}
@@ -3513,7 +3577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 3
+  track: 2
 --- !u!114 &1762154040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3726,7 +3790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 4
+  track: 3
 --- !u!114 &1787672441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3816,6 +3880,10 @@ Prefab:
       propertyPath: m_Name
       value: Drummer4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7, type: 2}
+      propertyPath: track
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
   m_RootGameObject: {fileID: 579456802}
@@ -3878,7 +3946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 0
+  track: 5
 --- !u!114 &1815377612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4008,7 +4076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 4
+  track: 3
 --- !u!114 &1833157406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4127,7 +4195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 2
+  track: 1
 --- !u!114 &1835774113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4235,7 +4303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 4
+  track: 3
 --- !u!114 &1884655007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4535,6 +4603,10 @@ Prefab:
       propertyPath: m_Name
       value: Clarinet3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
+      propertyPath: track
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cd59bd009da9ae4f9b9990b91480b40, type: 2}
   m_RootGameObject: {fileID: 750404534}
@@ -4608,7 +4680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 2
+  track: 1
 --- !u!114 &1949858585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4768,6 +4840,10 @@ Prefab:
       propertyPath: m_Name
       value: Trumpet1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
+      propertyPath: track
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
   m_RootGameObject: {fileID: 1208171235}
@@ -4811,6 +4887,10 @@ Prefab:
     - target: {fileID: 100000, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
       propertyPath: m_Name
       value: Trumpet2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
+      propertyPath: track
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18e53262899bc8e498daff957f8150a4, type: 2}
