@@ -13,12 +13,14 @@ public class AudioManager
 	List<AudioSource> offsetSources   = new List<AudioSource>();
 	float t                           = 0.0f;
 	float lastOffsetTime              = 0.0f;
-	const int maxOffsetDudes          = 2;
-	const float maxTimeBetweenOffsets = 20.0f;
-	const float minTimeBetweenOffsets = 2.0f;
-	const float percentageChance      = 40.0f;
-	const float pitchOffset           = 0.01f;
+	const float minPitchOffset        = 0.01f;
 	bool enableOffsetting             = false;
+
+	const int maxOffsetDudes          = 3;
+	const float maxTimeBetweenOffsets = 10.0f;
+	const float minTimeBetweenOffsets = 3.0f;
+	const float percentageChance      = 20.0f;
+
 
 	ScoreManager scoreManager;
 
@@ -169,7 +171,7 @@ public class AudioManager
 
 					AudioSource screwWithThisOne = trackDudes[sourceIndex];
 					// 3. mess with its pitch
-					float offset = Random.Range(pitchOffset, trackPitchOffsetMax[(int)track]);
+					float offset = Random.Range(minPitchOffset, trackPitchOffsetMax[(int)track]);
 					if ((screwWithThisOne.timeSamples & 1) == 1)
 					{
 						screwWithThisOne.pitch += offset;

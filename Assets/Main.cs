@@ -46,6 +46,15 @@ public class Main : MonoBehaviour
 
 	void StartIntro()
 	{
+		CharacterCollection col = GetComponent<CharacterCollection>();
+		if (col != null)
+		{
+			foreach (Transform character in col.characters)
+			{
+				playAnimation(character.gameObject, true);
+			}
+		}
+
 		sources[0].clip = Resources.Load<AudioClip>("Drums_In");
 		sources[1].clip = Resources.Load<AudioClip>("Tuba_In");
 		sources[2].clip = Resources.Load<AudioClip>("Trumpet_In");
@@ -73,7 +82,6 @@ public class Main : MonoBehaviour
 		{
 			foreach (Transform character in col.characters)
 			{
-				playAnimation(character.gameObject, true);
 				AudioScript audio = character.gameObject.GetComponent<AudioScript>();
 				if (audio != null) audio.Play();
 			}
@@ -85,6 +93,7 @@ public class Main : MonoBehaviour
 			Animator ani = field.GetComponent<Animator>();
 			ani.enabled = true;
 		}
+		audioManager.EnableOffsetting();
 		startedLevel = true;
 	}
 
