@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: LeaderPrefab
   m_TagString: Untagged
@@ -75,6 +76,20 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ddee824aed5e64cb72aacc825d9819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winPrefab: {fileID: 400000, guid: 85ed728c43b56e74a9d1bb09cf0df8bd, type: 2}
+  losePrefab: {fileID: 400000, guid: 88a37a24e40232948ae79c80022aa38c, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -4558,6 +4558,7 @@ GameObject:
   - 33: {fileID: 1892452104}
   - 23: {fileID: 1892452103}
   - 114: {fileID: 1892452102}
+  - 114: {fileID: 1892452098}
   m_Layer: 0
   m_Name: LeaderPrefab
   m_TagString: Untagged
@@ -4565,6 +4566,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1892452098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: a1b917df0dfadcd40bfe689288f889aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1774493334}
+  m_GameObject: {fileID: 1892452097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ddee824aed5e64cb72aacc825d9819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winPrefab: {fileID: 400000, guid: 85ed728c43b56e74a9d1bb09cf0df8bd, type: 2}
+  losePrefab: {fileID: 400000, guid: 88a37a24e40232948ae79c80022aa38c, type: 2}
 --- !u!114 &1892452102
 MonoBehaviour:
   m_ObjectHideFlags: 0
