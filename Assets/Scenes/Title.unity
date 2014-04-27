@@ -117,6 +117,7 @@ GameObject:
   - 23: {fileID: 203577425}
   - 114: {fileID: 203577424}
   - 95: {fileID: 203577423}
+  - 114: {fileID: 203577428}
   m_Layer: 0
   m_Name: Drummer2
   m_TagString: Untagged
@@ -167,7 +168,6 @@ MonoBehaviour:
   nextFrame: 0
   cellWidth: 16
   cellHeight: 32
-  slowOne: 0
 --- !u!23 &203577425
 Renderer:
   m_ObjectHideFlags: 0
@@ -212,6 +212,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1716677018}
   m_GameObject: {fileID: 203577421}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &203577428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716677018}
+  m_GameObject: {fileID: 203577421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  track: 0
 --- !u!1 &405358153
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +320,7 @@ GameObject:
   - 23: {fileID: 579456806}
   - 114: {fileID: 579456805}
   - 95: {fileID: 579456804}
+  - 114: {fileID: 579456809}
   m_Layer: 0
   m_Name: Drummer4
   m_TagString: Untagged
@@ -357,7 +371,6 @@ MonoBehaviour:
   nextFrame: 0
   cellWidth: 16
   cellHeight: 32
-  slowOne: 0
 --- !u!23 &579456806
 Renderer:
   m_ObjectHideFlags: 0
@@ -402,6 +415,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1792275874}
   m_GameObject: {fileID: 579456802}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &579456809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1792275874}
+  m_GameObject: {fileID: 579456802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  track: 0
 --- !u!1001 &682677928
 Prefab:
   m_ObjectHideFlags: 0
@@ -459,6 +485,7 @@ GameObject:
   - 23: {fileID: 737164032}
   - 114: {fileID: 737164036}
   - 95: {fileID: 737164035}
+  - 114: {fileID: 737164037}
   m_Layer: 0
   m_Name: Drummer1
   m_TagString: Untagged
@@ -553,7 +580,19 @@ MonoBehaviour:
   nextFrame: 0
   cellWidth: 16
   cellHeight: 32
-  slowOne: 0
+--- !u!114 &737164037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 682677928}
+  m_GameObject: {fileID: 737164030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  track: 0
 --- !u!1 &835612120
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +760,7 @@ GameObject:
   - 92: {fileID: 895175739}
   - 124: {fileID: 895175738}
   - 81: {fileID: 895175737}
+  - 114: {fileID: 895175742}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -789,6 +829,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &895175742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895175736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2488c9b3967b341a52947bb0c8a1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1134200308
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,6 +1040,7 @@ GameObject:
   - 23: {fileID: 1466069744}
   - 114: {fileID: 1466069743}
   - 95: {fileID: 1466069742}
+  - 114: {fileID: 1466069748}
   m_Layer: 0
   m_Name: Drummer3
   m_TagString: Untagged
@@ -1028,7 +1080,6 @@ MonoBehaviour:
   nextFrame: 0
   cellWidth: 16
   cellHeight: 32
-  slowOne: 0
 --- !u!23 &1466069744
 Renderer:
   m_ObjectHideFlags: 0
@@ -1084,6 +1135,19 @@ Transform:
   m_LocalScale: {x: 16, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 97633841}
+--- !u!114 &1466069748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 577371623}
+  m_GameObject: {fileID: 1466069741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3df1ff7be6d274cb2a71cdf36d74e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  track: 0
 --- !u!1 &1601941255
 GameObject:
   m_ObjectHideFlags: 0

@@ -187,8 +187,11 @@ public class AudioManager
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			foreach (AudioSource source in offsetSources)
+			AudioSource[] temp = new AudioSource[offsetSources.Count];
+			offsetSources.CopyTo(temp);
+			foreach (AudioSource source in temp)
 			{
+				Debug.Log(source);
 				ReSyncSource(source);
 			}
 		}
@@ -200,7 +203,13 @@ public class AudioManager
 		GameObject sourceGO = source.gameObject;
 		source.pitch = 1.0f;
 		sourceGO.GetComponent<Animator>().speed = 1.0f;
-		sourceGO.GetComponent<AniStrip>().CurFrame = GetInSyncAudioSource(track).gameObject.GetComponent<AniStrip>().CurFrame;
+
+		Debug.Log("trying to resync");
+
+		Animator inSyncAnimator = GetInSyncAudioSource(track).gameObject.GetComponent<Animator>();
+		AnimatorStateInfo stateInfo = inSyncAnimator.GetCurrentAnimatorStateInfo(0);
+		sourceGO.GetComponent<Animator>().Play(stateInfo.nameHash, 0, stateInfo.normalizedTime);
+
 		source.time  = trackPosition[(int)track];
 		--numOffsetDudes[(int)track];
 		offsetSources.Remove(source);
