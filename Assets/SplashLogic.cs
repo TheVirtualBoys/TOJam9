@@ -25,8 +25,16 @@ public class SplashLogic : MonoBehaviour
 	void Update()
 	{
 		t += Time.deltaTime;
-		if (isFading == false && (Input.anyKeyDown || (currentSplash < 2 && t >= timeBetweenSplash)))
+		//if (isFading == false && (Input.anyKeyDown || (currentSplash < 2 && t >= timeBetweenSplash)))
+		if (Input.anyKeyDown)
 		{
+			if (currentSplash < 2)
+				splashes[currentSplash++].SetActive(false);
+			else
+				Application.LoadLevel(1);
+		}
+		return;
+		/*
 			//Debug.Log("--here");
 			isFading = true;
 			// tween it out
@@ -48,7 +56,7 @@ public class SplashLogic : MonoBehaviour
 			doneFade = false;
 			CameraFade.StartAlphaFade(Color.black, true, 3.0f, 0f, () => { TweenCallback2(); });
 			t = 0.0f;
-		}
+		}*/
 	}
 
 	void TweenCallback()
@@ -56,6 +64,7 @@ public class SplashLogic : MonoBehaviour
 		//Debug.Log("--here 5");
 		splashes[currentSplash++].SetActive(false);
 		doneFade = true;
+		t = 0;
 	}
 
 	void TweenCallback2()
