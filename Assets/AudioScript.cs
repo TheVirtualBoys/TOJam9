@@ -41,4 +41,9 @@ public class AudioScript : MonoBehaviour
 		activeSource = (int)src;
 		source[activeSource].Play();
 	}
+
+	public static void Reset()
+	{
+		manager = null;
+	}
 }

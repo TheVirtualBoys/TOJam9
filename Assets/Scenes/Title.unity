@@ -287,6 +287,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &203577425
 Renderer:
   m_ObjectHideFlags: 0
@@ -486,6 +487,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &450788709
 Renderer:
   m_ObjectHideFlags: 0
@@ -604,6 +606,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &493210702
 Renderer:
   m_ObjectHideFlags: 0
@@ -711,6 +714,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
+  running: 0
 --- !u!23 &532312340
 Renderer:
   m_ObjectHideFlags: 0
@@ -829,6 +833,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
+  running: 0
 --- !u!23 &566846975
 Renderer:
   m_ObjectHideFlags: 0
@@ -965,6 +970,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &579456806
 Renderer:
   m_ObjectHideFlags: 0
@@ -1265,6 +1271,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!114 &737164037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,6 +1385,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &750404541
 Renderer:
   m_ObjectHideFlags: 0
@@ -1556,7 +1564,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 836521028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 414ed1dab6b97a64cb106e7b644082e4, type: 2}
   m_CullingMode: 0
@@ -1576,6 +1584,7 @@ GameObject:
   - 124: {fileID: 895175738}
   - 81: {fileID: 895175737}
   - 114: {fileID: 895175742}
+  - 114: {fileID: 895175743}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1656,6 +1665,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1390441918}
+--- !u!114 &895175743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895175736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a6741b03a6171429941d2ab5aed6f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 1892452105}
+  - {fileID: 1815377615}
+  - {fileID: 493210696}
+  - {fileID: 750404535}
+  - {fileID: 1389170147}
+  - {fileID: 737164031}
+  - {fileID: 203577422}
+  - {fileID: 1466069747}
+  - {fileID: 579456803}
+  - {fileID: 1787672436}
+  - {fileID: 1884655010}
+  - {fileID: 1100989911}
+  - {fileID: 1833157401}
+  - {fileID: 1208171243}
+  - {fileID: 1762154035}
+  - {fileID: 450788703}
+  - {fileID: 944131861}
+  - {fileID: 566846977}
+  - {fileID: 532312342}
+  - {fileID: 1835774108}
+  - {fileID: 1949858580}
 --- !u!1 &944131860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1786,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &944131867
 Renderer:
   m_ObjectHideFlags: 0
@@ -1906,6 +1949,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1100989917
 Renderer:
   m_ObjectHideFlags: 0
@@ -2098,6 +2142,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1208171241
 Renderer:
   m_ObjectHideFlags: 0
@@ -2329,6 +2374,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1389170153
 Renderer:
   m_ObjectHideFlags: 0
@@ -2471,6 +2517,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1466069744
 Renderer:
   m_ObjectHideFlags: 0
@@ -3105,6 +3152,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1762154041
 Renderer:
   m_ObjectHideFlags: 0
@@ -3267,6 +3315,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1787672442
 Renderer:
   m_ObjectHideFlags: 0
@@ -3418,6 +3467,7 @@ MonoBehaviour:
   cellWidth: 16
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1815377613
 Renderer:
   m_ObjectHideFlags: 0
@@ -3547,6 +3597,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1833157407
 Renderer:
   m_ObjectHideFlags: 0
@@ -3665,6 +3716,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
+  running: 0
 --- !u!23 &1835774114
 Renderer:
   m_ObjectHideFlags: 0
@@ -3772,6 +3824,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1884655008
 Renderer:
   m_ObjectHideFlags: 0
@@ -3920,6 +3973,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 1
+  running: 0
 --- !u!23 &1892452103
 Renderer:
   m_ObjectHideFlags: 0
@@ -4093,6 +4147,7 @@ MonoBehaviour:
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
+  running: 0
 --- !u!23 &1949858586
 Renderer:
   m_ObjectHideFlags: 0

@@ -29,21 +29,25 @@ public class ScoreManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		foreach (DesyncedObject obj in desyncedObjs)
+		if (curLife > 0)
 		{
-			//if the desync object is over the wait time then count points against it
-			float desyncTime = Time.time - obj.stime;
-			float timeOver = desyncTime - (float)obj.numPointsSoFar;
-			if (timeOver > 1f)
+			foreach (DesyncedObject obj in desyncedObjs)
 			{
-				obj.numPointsSoFar += (int)timeOver;
-				curLife -= (int)timeOver * penaltyPointsPerSecond;
+				//if the desync object is over the wait time then count points against it
+				float desyncTime = Time.time - obj.stime;
+				float timeOver = desyncTime - (float)obj.numPointsSoFar;
+				if (timeOver > 1f)
+				{
+					obj.numPointsSoFar += (int)timeOver;
+					curLife -= (int)timeOver * penaltyPointsPerSecond;
+				}
 			}
-		}
 
-		if (curLife <= 0)
-		{
-			//TODO: game over
+			if (curLife <= 0)
+			{
+				gameOver();
+				curLife = 0;
+			}
 		}
 	}
 
@@ -92,4 +96,50 @@ public class ScoreManager : MonoBehaviour {
 		return ret;
 	}
 
+	private void gameOver()
+	{
+		Transform[] characters = null;
+
+		GameObject mainCamera = GameObject.Find("Main Camera");
+		if (mainCamera != null)
+		{
+			CharacterCollection col = mainCamera.GetComponent<CharacterCollection>();
+			if (col != null)
+			{
+				characters = col.characters;
+			}
+		}
+
+		if (characters != null)
+		{
+			foreach (Transform character in characters)
+			{
+				playAnimation(character.gameObject, false);
+			}
+		}
+
+		GameObject field = GameObject.Find("Field");
+		if (field != null)
+		{
+			Animator ani = field.GetComponent<Animator>();
+			ani.enabled = false;
+		}
+
+		CameraFade.StartAlphaFade(Color.black, false, 5.0f, 0f, () => { RestartScene(); });
+	}
+
+	private void playAnimation(GameObject character, bool running)
+	{
+		if (character != null)
+		{
+			AniStrip ani = character.GetComponent<AniStrip>();
+			ani.running = running;
+		}
+	}
+
+	private void RestartScene()
+	{
+		AudioScript.Reset();
+		Application.LoadLevel("Title");
+	}
 }

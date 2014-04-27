@@ -24,6 +24,8 @@ public class AniStrip : MonoBehaviour {
 
 	public float speedMultiplier;
 
+	public bool running;
+
 	private int numTilesWide;
 	private int numTilesHigh;
 
@@ -37,6 +39,8 @@ public class AniStrip : MonoBehaviour {
 
 	void Awake()
 	{
+		running = false;
+
 		if (mat != null && mat.HasProperty(texPropertyName))
 		{
 			//need to clone the material so we have our own version
@@ -107,19 +111,21 @@ public class AniStrip : MonoBehaviour {
 
 	public void Update()
 	{
-		dt += Time.deltaTime * speedMultiplier;
-		int framesToAdvance = 0;
-		while (dt > timePerFrame)
+		if (running)
 		{
-			dt -= timePerFrame;
-			framesToAdvance++;
-		}
+			dt += Time.deltaTime * speedMultiplier;
+			int framesToAdvance = 0;
+			while (dt > timePerFrame)
+			{
+				dt -= timePerFrame;
+				framesToAdvance++;
+			}
 
-		if (framesToAdvance > 0)
-		{
-			//Debug.Log("advancing " + framesToAdvance);
-			setFrame(curFrame + framesToAdvance);
+			if (framesToAdvance > 0)
+			{
+				//Debug.Log("advancing " + framesToAdvance);
+				setFrame(curFrame + framesToAdvance);
+			}
 		}
-
 	}
 }
