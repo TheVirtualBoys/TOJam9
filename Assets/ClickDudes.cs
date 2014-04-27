@@ -6,6 +6,9 @@ public class ClickDudes : MonoBehaviour
 	BoxCollider2D boxCollider = null;
 	AudioSource audioSource = null;
 
+	public Transform goodClickPrefab;
+	public Transform badClickPrefab;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -18,11 +21,21 @@ public class ClickDudes : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Mouse0))
 		{
-			if (!Main.audioManager.IsOffset(audioSource)) return;
 			Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			if (Physics2D.OverlapPoint(mouse) == boxCollider)
 			{
-				Main.audioManager.ReSyncSource(audioSource);
+				if (Main.audioManager.IsOffset(audioSource))
+				{
+					mouse.z = -5;
+					Instantiate(goodClickPrefab, mouse, Quaternion.identity);
+
+					Main.audioManager.ReSyncSource(audioSource);
+				}
+				else
+				{
+					mouse.z = -5;
+					Instantiate(badClickPrefab, mouse, Quaternion.identity);
+				}
 			}
 		}
 	}

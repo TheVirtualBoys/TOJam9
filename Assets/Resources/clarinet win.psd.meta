@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 221e8dac67661a44f8f6f95885de21b8
+guid: 71339be232f894d45a771c02e380785d
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,21 +45,12 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: drum lose_0
+    - name: clarinet win_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: drum lose_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
+        y: 64
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}

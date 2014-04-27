@@ -54,7 +54,7 @@ MonoBehaviour:
   iterations: 1
   destroyWhenFinished: 1
   repeatForever: 0
-  fps: 60
+  fps: 30
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
