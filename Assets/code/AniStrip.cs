@@ -7,7 +7,7 @@ using System.Collections;
  * Sets up an animation strip that assumes each cell of the animation is the same size,
  * and the texture size is split evenly among all tiles horizontally and vertically.
  * 
- * Cell numbering is from bottom left to top right.
+ * Cell numbering is from top left to bottom right.
  * 
  */
 public class AniStrip : MonoBehaviour {
@@ -81,7 +81,7 @@ public class AniStrip : MonoBehaviour {
 	{
 		int col = frame % numTilesWide;
 		int row = frame / numTilesWide;
-		mat.SetTextureOffset(texPropertyName, new Vector2(col * scaleW, row * scaleH));
+		mat.SetTextureOffset(texPropertyName, new Vector2(col * scaleW, (numTilesHigh - row - 1) * scaleH));
 
 		curFrame = frame;
 	}
