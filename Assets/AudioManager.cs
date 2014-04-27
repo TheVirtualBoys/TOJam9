@@ -23,19 +23,19 @@ public class AudioManager
 
 	public enum Tracks
 	{
-		TRACK_NONE,
 		TRACK_DRUM,
 		TRACK_TUBA,
 		TRACK_TRUMPET,
 		TRACK_FLUTE,
-		TRACK_MAX
+		TRACK_MAX,
+		TRACK_NONE
 	}
 
 	public AudioManager(ScoreManager scoreManager)
 	{
 		this.scoreManager = scoreManager;
 
-		tracks[(int)Tracks.TRACK_NONE] = null;
+		//tracks[(int)Tracks.TRACK_NONE] = null;
 		tracks[(int)Tracks.TRACK_DRUM] = Resources.Load<AudioClip>("Drums_Loop");
 		tracks[(int)Tracks.TRACK_TUBA] = Resources.Load<AudioClip>("Tuba_Loop");
 		tracks[(int)Tracks.TRACK_TRUMPET] = Resources.Load<AudioClip>("Trumpet_Loop");
@@ -82,9 +82,12 @@ public class AudioManager
 
 	public void CreateAudioSource(AudioSource source, Tracks track)
 	{
-		source.clip = tracks[(int)track];
-		source.loop = true;
-		sources.Add(source);
+		if ((int)track < (int)Tracks.TRACK_MAX)
+		{
+			source.clip = tracks[(int)track];
+			source.loop = true;
+			sources.Add(source);
+		}
 	}
 
 	public int NumActiveSources(Tracks track)
@@ -102,6 +105,13 @@ public class AudioManager
 		float dt = Time.deltaTime;
 		t += dt;
 		int offsetDudes = TotalOffsetDudes();
+			/*if (Mathf.FloorToInt(t) > 1)
+			{
+				string str = "";
+				for (int i = 0; i < numOffsetDudes.Length; ++i)
+					str += numOffsetDudes[i] + " ";
+				Debug.Log(str);
+			}*/
 
 		if (offsetDudes < maxOffsetDudes && t >= lastOffsetTime + minTimeBetweenOffsets)
 		{
@@ -125,7 +135,7 @@ public class AudioManager
 				}
 				else
 				{
-					track = Random.Range(0, offsetableTracks.Count);
+					track = offsetableTracks[Random.Range(0, offsetableTracks.Count)];
 				}
 				
 				// 2. pick a random dude playing that instrument to desync
@@ -167,6 +177,8 @@ public class AudioManager
 					}
 					Debug.Log("Offset " + source + " @" + offset);
 					offsetSources.Add(source);
+					if (numOffsetDudes[track] > 0)
+						Debug.LogWarning("Wat?");
 					++numOffsetDudes[track];
 					lastOffsetTime = t;
 					scoreManager.onGotDesync(source.gameObject.GetInstanceID());
