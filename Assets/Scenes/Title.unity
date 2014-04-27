@@ -1934,6 +1934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1390441918}
+  readyText: {fileID: 100000, guid: 8dfcddb48453d8f4db22a011f2ffee08, type: 2}
+  marchText: {fileID: 100000, guid: a44b0957d22b526408e662839631610c, type: 2}
 --- !u!114 &895175743
 MonoBehaviour:
   m_ObjectHideFlags: 0

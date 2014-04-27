@@ -80,6 +80,7 @@ public class Main : MonoBehaviour
 			sources[i].loop = false;
 			sources[i].Play();
 		}
+		Instantiate(readyText);
 	}
 
 	void StartLevel()
@@ -102,6 +103,7 @@ public class Main : MonoBehaviour
 		}
 		audioManager.EnableOffsetting();
 		startedLevel = true;
+		Instantiate(marchText);
 	}
 
 	private void playAnimation(GameObject character, bool running)
