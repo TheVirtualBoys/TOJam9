@@ -26,8 +26,9 @@ public class SplashLogic : MonoBehaviour
 	{
 		t += Time.deltaTime;
 		//if (isFading == false && (Input.anyKeyDown || (currentSplash < 2 && t >= timeBetweenSplash)))
-		if (Input.anyKeyDown)
+		if (Input.anyKeyDown || t > timeBetweenSplash)
 		{
+			t = 0;
 			if (currentSplash < 2)
 				splashes[currentSplash++].SetActive(false);
 			else
