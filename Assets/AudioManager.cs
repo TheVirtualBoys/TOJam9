@@ -105,6 +105,7 @@ public class AudioManager
 
 	public void EnableOffsetting()
 	{
+		t = 0.0f;
 		enableOffsetting = true;
 	}
 
