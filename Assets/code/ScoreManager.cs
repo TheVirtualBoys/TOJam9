@@ -125,6 +125,7 @@ public class ScoreManager : MonoBehaviour {
 			foreach (Transform character in characters)
 			{
 				playAnimation(character.gameObject, false);
+				showLoseAnimation(character.gameObject);
 			}
 		}
 
@@ -144,6 +145,15 @@ public class ScoreManager : MonoBehaviour {
 		{
 			AniStrip ani = character.GetComponent<AniStrip>();
 			ani.running = running;
+		}
+	}
+
+	private void showLoseAnimation(GameObject character)
+	{
+		WinLoseSpriteSwapper spriteSwapper = character.GetComponent<WinLoseSpriteSwapper>();
+		if (spriteSwapper != null)
+		{
+			spriteSwapper.OnLose();
 		}
 	}
 

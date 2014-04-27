@@ -33,6 +33,15 @@ public class AudioScript : MonoBehaviour
 	public void SetInstrument(AudioManager.Tracks track)
 	{
 		manager.CreateAudioSource(source[activeSource], track);
+		float volume = 1.0f;
+		switch (track)
+		{
+			case AudioManager.Tracks.TRACK_DRUM:    volume = 0.2f; break;
+			case AudioManager.Tracks.TRACK_FLUTE:   volume = 0.1f; break;
+			case AudioManager.Tracks.TRACK_TRUMPET: volume = 0.6f; break;
+			case AudioManager.Tracks.TRACK_TUBA:    volume = 1.0f; break;
+		}
+		source[activeSource].volume = volume;
 	}
 
 	void SetActiveSource(AudioSources src)
