@@ -1664,7 +1664,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 836521028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 414ed1dab6b97a64cb106e7b644082e4, type: 2}
   m_CullingMode: 0
@@ -2392,6 +2392,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1257753354}
+  - 114: {fileID: 1257753355}
   m_Layer: 0
   m_Name: UI_Progress
   m_TagString: Untagged
@@ -2415,6 +2416,21 @@ Transform:
   - {fileID: 251575934}
   - {fileID: 1457428993}
   m_Father: {fileID: 0}
+--- !u!114 &1257753355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257753353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6117f3f049785d46b38e4ef94b4d0e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentComplete: 50
+  aniToTrack: {fileID: 836521033}
+  note: {fileID: 1898505041}
+  filler: {fileID: 494005757}
 --- !u!1 &1366066346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,7 +2667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1390441918
 MonoBehaviour:
   m_ObjectHideFlags: 0
