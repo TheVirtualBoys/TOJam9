@@ -3,13 +3,13 @@ using System.Collections;
 
 public class ClickDudes : MonoBehaviour
 {
-	BoxCollider2D collider = null;
+	BoxCollider2D boxCollider = null;
 	AudioSource audioSource = null;
 
 	// Use this for initialization
 	void Start()
 	{
-		collider    = gameObject.GetComponent<BoxCollider2D>();
+		boxCollider    = gameObject.GetComponent<BoxCollider2D>();
 		audioSource = gameObject.GetComponent<AudioSource>();
 	}
 	
@@ -20,7 +20,7 @@ public class ClickDudes : MonoBehaviour
 		{
 			if (!Main.audioManager.IsOffset(audioSource)) return;
 			Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			if (Physics2D.OverlapPoint(mouse) == collider)
+			if (Physics2D.OverlapPoint(mouse) == boxCollider)
 			{
 				Main.audioManager.ReSyncSource(audioSource);
 			}
