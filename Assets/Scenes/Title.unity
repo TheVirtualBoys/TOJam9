@@ -2820,7 +2820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1390441918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,6 +3287,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: 057620e2d5d4d014d8865b84fd5a0941, type: 3}
   level: 220
   maxLevel: 220
+  running: 1
 --- !u!1 &1648076734
 GameObject:
   m_ObjectHideFlags: 0

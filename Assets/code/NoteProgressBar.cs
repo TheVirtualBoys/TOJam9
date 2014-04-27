@@ -15,6 +15,8 @@ public class NoteProgressBar : MonoBehaviour {
 
 	private float noteSpriteWidth;
 
+	private bool waitForAudioToFinish;
+
 	// Use this for initialization
 	void Start () {
 		noteSpriteWidth = note.GetComponent<SpriteRenderer>().bounds.extents.x * 2;
@@ -54,8 +56,15 @@ public class NoteProgressBar : MonoBehaviour {
 
 			if (percentComplete >= 1)
 			{
-				OnWin();
+				waitForAudioToFinish = true;
 			}
+		}
+
+		if (waitForAudioToFinish)
+		{
+			Main.audioManager.StopAllSounds();
+			OnWin();
+			waitForAudioToFinish = false;
 		}
 	}
 
@@ -89,8 +98,20 @@ public class NoteProgressBar : MonoBehaviour {
 			ani.enabled = false;
 		}
 
-		CameraFade.StartAlphaFade(Color.black, false, 5.0f, 0f, () => { RestartScene(); });
+		CameraFade.StartAlphaFade(Color.black, false, 5.0f, 6f, () => { RestartScene(); });
 
+		Main mainScript = Camera.main.gameObject.GetComponent<Main>();
+		if (mainScript != null)
+		{
+			mainScript.StartOutroMusic();
+		}
+
+
+		GameObject feelingsBarGO = GameObject.Find("UI_Feelings");
+		if (feelingsBarGO != null) {
+			FeelingsBar feelingsBar = feelingsBarGO.GetComponent<FeelingsBar>();
+			feelingsBar.running = false;
+		}
 	}
 
 	private void playAnimation(GameObject character, bool running)
@@ -114,7 +135,7 @@ public class NoteProgressBar : MonoBehaviour {
 	private void RestartScene()
 	{
 		AudioScript.Reset();
-		Application.LoadLevel("Title");
+		Application.LoadLevel(0);
 	}
 
 }

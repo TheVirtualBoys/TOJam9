@@ -21,18 +21,18 @@ AnimationClip:
       - time: 0
         value: 1
         inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 95.1999969
+        outSlope: -0
+        tangentMode: 21
+      - time: 89.9666672
+        value: 1
+        inSlope: 0
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
-      - time: 105.116669
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.x
@@ -45,18 +45,18 @@ AnimationClip:
       - time: 0
         value: .227272734
         inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 95.1999969
+        outSlope: -0
+        tangentMode: 21
+      - time: 89.9666672
+        value: .227272734
+        inSlope: 0
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: .227272734
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
-      - time: 105.116669
-        value: .227272734
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.y
@@ -69,18 +69,18 @@ AnimationClip:
       - time: 0
         value: 0
         inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 95.1999969
+        outSlope: -0
+        tangentMode: 21
+      - time: 89.9666672
+        value: 0
+        inSlope: 0
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
-      - time: 105.116669
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.z
@@ -93,33 +93,33 @@ AnimationClip:
       - time: 0
         value: .772727311
         inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        outSlope: -.00743966689
+        tangentMode: 21
       - time: 50.0999985
         value: .400000006
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        inSlope: -.00743966689
+        outSlope: -0
+        tangentMode: 21
       - time: 54.9000015
         value: .400000006
         inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        outSlope: .00789473671
+        tangentMode: 21
       - time: 59.9666672
         value: .439999998
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 95.1999969
+        inSlope: .00789473671
+        outSlope: -.0146666663
+        tangentMode: 21
+      - time: 89.9666672
+        value: 0
+        inSlope: -.0146666663
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 0
-      - time: 105.116669
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.w
@@ -135,7 +135,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 105.116669
+    m_StopTime: 100.083336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -156,18 +156,18 @@ AnimationClip:
       - time: 0
         value: 1
         inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 95.1999969
+        outSlope: -0
+        tangentMode: 21
+      - time: 89.9666672
+        value: 1
+        inSlope: 0
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
-      - time: 105.116669
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.x
@@ -180,18 +180,18 @@ AnimationClip:
       - time: 0
         value: .227272734
         inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 95.1999969
+        outSlope: -0
+        tangentMode: 21
+      - time: 89.9666672
+        value: .227272734
+        inSlope: 0
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: .227272734
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
-      - time: 105.116669
-        value: .227272734
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.y
@@ -204,18 +204,18 @@ AnimationClip:
       - time: 0
         value: 0
         inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 95.1999969
+        outSlope: -0
+        tangentMode: 21
+      - time: 89.9666672
+        value: 0
+        inSlope: 0
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
-      - time: 105.116669
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.z
@@ -228,33 +228,33 @@ AnimationClip:
       - time: 0
         value: .772727311
         inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        outSlope: -.00743966689
+        tangentMode: 21
       - time: 50.0999985
         value: .400000006
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        inSlope: -.00743966689
+        outSlope: -0
+        tangentMode: 21
       - time: 54.9000015
         value: .400000006
         inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        outSlope: .00789473671
+        tangentMode: 21
       - time: 59.9666672
         value: .439999998
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 95.1999969
+        inSlope: .00789473671
+        outSlope: -.0146666663
+        tangentMode: 21
+      - time: 89.9666672
+        value: 0
+        inSlope: -.0146666663
+        outSlope: -0
+        tangentMode: 21
+      - time: 100.083336
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 0
-      - time: 105.116669
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: material._MainTex_ST.w
