@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.6015244, y: -30.0253639, z: 0}
-  m_LocalScale: {x: 16, y: 32, z: 1}
+  m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -44,7 +44,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  - {fileID: 2100000, guid: 933d71457b695514d94e96df84169dd3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -80,7 +80,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec8cee7be69eae5499e4a94b79f57a22, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f276bbe29d69b42b4a866e3c787bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  mat: {fileID: 2100000, guid: 933d71457b695514d94e96df84169dd3, type: 2}
   texPropertyName: _MainTex
   nextFrame: 0
-  cellWidth: 16
+  cellWidth: 32
   cellHeight: 32
 --- !u!114 &11400002
 MonoBehaviour:

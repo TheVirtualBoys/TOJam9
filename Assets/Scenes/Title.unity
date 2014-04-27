@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 203577421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.6015205, y: -30.0253601, z: 0}
-  m_LocalScale: {x: 16, y: 32, z: 1}
+  m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 97633841}
 --- !u!95 &203577423
@@ -146,7 +146,7 @@ Animator:
   m_GameObject: {fileID: 203577421}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
+  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -163,10 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f276bbe29d69b42b4a866e3c787bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   nextFrame: 0
-  cellWidth: 16
+  cellWidth: 32
   cellHeight: 32
 --- !u!23 &203577425
 Renderer:
@@ -181,7 +181,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  - {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -336,7 +336,7 @@ Transform:
   m_GameObject: {fileID: 579456802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.2967682, y: -62.0436096, z: 0}
-  m_LocalScale: {x: 16, y: 32, z: 1}
+  m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 97633841}
 --- !u!95 &579456804
@@ -349,7 +349,7 @@ Animator:
   m_GameObject: {fileID: 579456802}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
+  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -366,10 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f276bbe29d69b42b4a866e3c787bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   nextFrame: 0
-  cellWidth: 16
+  cellWidth: 32
   cellHeight: 32
 --- !u!23 &579456806
 Renderer:
@@ -384,7 +384,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  - {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -467,6 +467,10 @@ Prefab:
       propertyPath: m_Name
       value: Drummer1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
+      propertyPath: nextFrame
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5719f68604095940941a0df8fe577a7, type: 2}
   m_RootGameObject: {fileID: 737164030}
@@ -501,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 737164030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.78034973, y: -30.5417862, z: 0}
-  m_LocalScale: {x: 16, y: 32, z: 1}
+  m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 97633841}
 --- !u!23 &737164032
@@ -517,7 +521,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  - {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -558,7 +562,7 @@ Animator:
   m_GameObject: {fileID: 737164030}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
+  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -575,10 +579,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f276bbe29d69b42b4a866e3c787bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   nextFrame: 0
-  cellWidth: 16
+  cellWidth: 32
   cellHeight: 32
 --- !u!114 &737164037
 MonoBehaviour:
@@ -1058,7 +1062,7 @@ Animator:
   m_GameObject: {fileID: 1466069741}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
+  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -1075,10 +1079,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f276bbe29d69b42b4a866e3c787bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   nextFrame: 0
-  cellWidth: 16
+  cellWidth: 32
   cellHeight: 32
 --- !u!23 &1466069744
 Renderer:
@@ -1093,7 +1097,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
+  - {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1132,7 +1136,7 @@ Transform:
   m_GameObject: {fileID: 1466069741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.6015244, y: -63.5928802, z: 0}
-  m_LocalScale: {x: 16, y: 32, z: 1}
+  m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 97633841}
 --- !u!114 &1466069748
