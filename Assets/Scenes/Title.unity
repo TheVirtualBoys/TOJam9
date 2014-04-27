@@ -349,6 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &203577427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -525,6 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &450788705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -659,6 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &493210698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -832,6 +838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &532312336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -966,6 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &566846971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1215,6 +1225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &579456808
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1467,6 +1479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &737164034
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1579,6 +1593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &750404537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1837,6 +1853,7 @@ GameObject:
   - 81: {fileID: 895175737}
   - 114: {fileID: 895175742}
   - 114: {fileID: 895175743}
+  - 114: {fileID: 895175744}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1950,6 +1967,18 @@ MonoBehaviour:
   - {fileID: 532312342}
   - {fileID: 1835774108}
   - {fileID: 1949858580}
+--- !u!114 &895175744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895175736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e37cf66618b82c44a7d33cd0012d395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!1 &944131860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &944131863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2227,6 +2258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1100989913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2435,6 +2468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1208171237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2679,6 +2714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1389170149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2980,6 +3017,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &1466069746
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3595,6 +3634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1762154037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3823,6 +3864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1787672438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3994,6 +4037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1815377609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4139,6 +4184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1833157403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4273,6 +4320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1835774110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4396,6 +4445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1884655004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4507,6 +4558,7 @@ GameObject:
   - 33: {fileID: 1892452104}
   - 23: {fileID: 1892452103}
   - 114: {fileID: 1892452102}
+  - 114: {fileID: 1892452098}
   m_Layer: 0
   m_Name: LeaderPrefab
   m_TagString: Untagged
@@ -4514,6 +4566,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1892452098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: a1b917df0dfadcd40bfe689288f889aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1774493334}
+  m_GameObject: {fileID: 1892452097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ddee824aed5e64cb72aacc825d9819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winPrefab: {fileID: 400000, guid: 85ed728c43b56e74a9d1bb09cf0df8bd, type: 2}
+  losePrefab: {fileID: 400000, guid: 88a37a24e40232948ae79c80022aa38c, type: 2}
 --- !u!114 &1892452102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4726,6 +4792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1949858582
 BoxCollider2D:
   m_ObjectHideFlags: 0
