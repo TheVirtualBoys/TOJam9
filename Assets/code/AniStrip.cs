@@ -12,22 +12,24 @@ using System.Collections;
  */
 public class AniStrip : MonoBehaviour {
 
-    public Material mat;
-    public string texPropertyName;
+	public Material mat;
+	public string texPropertyName;
 
-    public int cellWidth;
-    public int cellHeight;
+	public float nextFrame;
 
-    private int numTilesWide;
+	public int cellWidth;
+	public int cellHeight;
+
+	private int numTilesWide;
 	private int numTilesHigh;
 
-    private float scaleW;
-    private float scaleH;
+	private float scaleW;
+	private float scaleH;
 
-    private int curFrame = 0;
+	private int curFrame = 0;
 
-    void Awake()
-    {
+	void Awake()
+	{
 		if (mat != null && mat.HasProperty(texPropertyName))
 		{
 			//need to clone the material so we have our own version
@@ -57,7 +59,7 @@ public class AniStrip : MonoBehaviour {
 
 		renderer.material = mat;
 
-    }
+	}
 
 	public int CurFrame
 	{
@@ -82,5 +84,17 @@ public class AniStrip : MonoBehaviour {
 		mat.SetTextureOffset(texPropertyName, new Vector2(col * scaleW, row * scaleH));
 
 		curFrame = frame;
+	}
+
+	public void Update()
+	{
+		int next = 0;
+		if (NumFrames > 0)
+			next = (int)nextFrame % NumFrames;
+
+		if (next != curFrame)
+		{
+			setFrame(next);
+		}
 	}
 }

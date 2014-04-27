@@ -9,14 +9,13 @@ public class AudioManager
 	AudioClip[] tracks              = new AudioClip[(int)Tracks.TRACK_MAX];
 	float[] trackPitchOffsetMax     = new float[(int)Tracks.TRACK_MAX];
 	float[] trackOffsetMax          = new float[(int)Tracks.TRACK_MAX];
-	float[] trackPosition           = new float[(int)Tracks.TRACK_MAX];
 	int[] numOffsetDudes            = new int[(int)Tracks.TRACK_MAX];
 	List<AudioSource> offsetSources = new List<AudioSource>();
 	float t                         = 0.0f;
 	float lastOffsetTime            = 0.0f;
 	const int maxOffsetDudes          = 2;
 	const float maxTimeBetweenOffsets = 20.0f;
-	const float minTimeBetweenOffsets = 7.0f;
+	const float minTimeBetweenOffsets = 2.0f;
 	const float percentageChance      = 40.0f;
 	const float pitchOffset           = 0.01f;
 
@@ -37,7 +36,6 @@ public class AudioManager
 		tracks[3] = Resources.Load<AudioClip>("Flute_Loop");
 		for (int i = 0; i < (int)Tracks.TRACK_MAX; ++i)
 		{
-			trackPosition[i]       = 0.0f;
 			trackOffsetMax[i]      = 1.0f; // 2 seconds
 			trackPitchOffsetMax[i] = 0.10f;
 		}
@@ -62,10 +60,18 @@ public class AudioManager
 		return Tracks.TRACK_MAX;
 	}
 
+	AudioSource GetInSyncAudioSource(Tracks track)
+	{
+		foreach (AudioSource source in sources)
+		{
+			if (source.clip == tracks[(int)track] && !offsetSources.Contains(source)) return source;
+		}
+		return null;
+	}
+
 	public void CreateAudioSource(AudioSource source, Tracks track)
 	{
 		source.clip = tracks[(int)track];
-		source.time = trackPosition[(int)track];
 		source.loop = true;
 		sources.Add(source);
 	}
@@ -84,10 +90,6 @@ public class AudioManager
 	{
 		float dt = Time.deltaTime;
 		t += dt;
-		for (int i = 0; i < (int)Tracks.TRACK_MAX; ++i)
-		{
-			trackPosition[i] += dt;
-		}
 		int offsetDudes = TotalOffsetDudes();
 
 		if (offsetDudes < maxOffsetDudes && t >= lastOffsetTime + minTimeBetweenOffsets)
@@ -131,7 +133,7 @@ public class AudioManager
 					AudioSource source = null;
 					while (sourceIndex == -1)
 					{
-						sourceIndex = Random.Range(0, trackDudes.Count - 1);
+						sourceIndex = Random.Range(0, trackDudes.Count);
 						source = trackDudes[sourceIndex];
 						if (offsetSources.Contains(source))
 						{
@@ -145,10 +147,12 @@ public class AudioManager
 					if ((screwWithThisOne.timeSamples & 1) == 1)
 					{
 						screwWithThisOne.pitch += offset;
+						source.gameObject.GetComponent<Animator>().speed += offset;
 					}
 					else
 					{
 						screwWithThisOne.pitch -= offset;
+						source.gameObject.GetComponent<Animator>().speed -= offset;
 					}
 					Debug.Log("Offset " + source + " @" + offset);
 					offsetSources.Add(source);
@@ -165,28 +169,57 @@ public class AudioManager
 			Tracks track = GetTrack(source);
 			if (track == Tracks.TRACK_MAX) continue;
 
-			if (source.time >= (trackPosition[(int)track] + trackOffsetMax[(int)track]) || source.time <= (trackPosition[(int)track] - trackOffsetMax[(int)track]))
+			float trackLength = source.clip.length;
+
+			AudioSource inSyncAudioSource = GetInSyncAudioSource(track);
+			if (source.time >= (inSyncAudioSource.time + trackOffsetMax[(int)track]) || source.time <= (inSyncAudioSource.time - trackOffsetMax[(int)track]))
 			{
 				if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i]);
 				source.pitch = 1.0f;
+				source.gameObject.GetComponent<Animator>().speed = 1.0f;
 				// do something with the animation
 			}
 		}
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			foreach (AudioSource source in offsetSources)
+			Debug.Log("----------------------------------");
+			AudioSource[] temp = new AudioSource[offsetSources.Count];
+			offsetSources.CopyTo(temp);
+			foreach (AudioSource source in temp	)
 			{
 				ReSyncSource(source);
 			}
+
+			foreach (AudioSource source in temp)
+			{
+				RemoveDesyncSource(source);
+			}
+			lastOffsetTime = t;
 		}
 	}
 
 	public void ReSyncSource(AudioSource source)
 	{
-		source.pitch = 1.0f;
+		Debug.Log("Resync " + source);
 		Tracks track = GetTrack(source);
-		source.time  = trackPosition[(int)track];
+		GameObject sourceGO = source.gameObject;
+		source.pitch = 1.0f;
+		sourceGO.GetComponent<Animator>().speed = 1.0f;
+
+		AudioSource inSyncAudioSource = GetInSyncAudioSource(track);
+		Debug.Log("With " + inSyncAudioSource);
+		Animator inSyncAnimator = inSyncAudioSource.gameObject.GetComponent<Animator>();
+		AnimatorStateInfo stateInfo = inSyncAnimator.GetCurrentAnimatorStateInfo(0);
+		sourceGO.GetComponent<Animator>().Play(stateInfo.nameHash, -1, stateInfo.normalizedTime);
+
+		source.time = inSyncAudioSource.time;
+	}
+
+	public void RemoveDesyncSource(AudioSource source)
+	{
+		Tracks track = GetTrack(source);
+
 		--numOffsetDudes[(int)track];
 		offsetSources.Remove(source);
 	}
