@@ -2427,10 +2427,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6117f3f049785d46b38e4ef94b4d0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentComplete: 50
+  percentComplete: 0
   aniToTrack: {fileID: 836521033}
   note: {fileID: 1898505041}
   filler: {fileID: 494005757}
+  maxBounce: 3
+  freq: 25
 --- !u!1 &1366066346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,7 +2669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1390441918
 MonoBehaviour:
   m_ObjectHideFlags: 0

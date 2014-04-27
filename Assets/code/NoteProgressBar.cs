@@ -10,6 +10,9 @@ public class NoteProgressBar : MonoBehaviour {
 	public Transform note;
 	public Transform filler;
 
+	public float maxBounce;
+	public float freq;
+
 	private float noteSpriteWidth;
 
 	// Use this for initialization
@@ -32,6 +35,7 @@ public class NoteProgressBar : MonoBehaviour {
 		
 		Vector3 notePos = note.position;
 		notePos.x = filler.position.x + percentComplete * maxWidth;
+		notePos.y = filler.position.y + maxBounce * Mathf.Sin(percentComplete * 2 * Mathf.PI * freq);
 		note.position = notePos;
 	}
 }
