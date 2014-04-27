@@ -349,6 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &203577427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -525,6 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &450788705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -659,6 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &493210698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -832,6 +838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &532312336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -966,6 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &566846971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1215,6 +1225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &579456808
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1467,6 +1479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &737164034
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1579,6 +1593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &750404537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1962,7 +1978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e37cf66618b82c44a7d33cd0012d395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  animationPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!1 &944131860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,6 +2024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &944131863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2240,6 +2258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1100989913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2448,6 +2468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1208171237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2692,6 +2714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1389170149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2993,6 +3017,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!33 &1466069746
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3608,6 +3634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1762154037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3836,6 +3864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1787672438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4007,6 +4037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1815377609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4152,6 +4184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1833157403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4286,6 +4320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1835774110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4409,6 +4445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1884655004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4739,6 +4777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodClickPrefab: {fileID: 400000, guid: 29e4caac693dd77469a3e9db9cb67ba9, type: 2}
+  badClickPrefab: {fileID: 400000, guid: 0c1c279be5540b2428372c24ca8a47ab, type: 2}
 --- !u!61 &1949858582
 BoxCollider2D:
   m_ObjectHideFlags: 0
