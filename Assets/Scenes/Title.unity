@@ -1832,7 +1832,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 836521028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 414ed1dab6b97a64cb106e7b644082e4, type: 2}
   m_CullingMode: 0
@@ -3287,6 +3287,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: 057620e2d5d4d014d8865b84fd5a0941, type: 3}
   level: 220
   maxLevel: 220
+  running: 1
 --- !u!1 &1648076734
 GameObject:
   m_ObjectHideFlags: 0
