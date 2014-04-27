@@ -5,19 +5,20 @@ using System.Collections.Generic;
 public class AudioManager
 {
 	//Dictionary<Tracks, List<AudioSource> > sources = 
-	List<AudioSource> sources       = new List<AudioSource>();
-	AudioClip[] tracks              = new AudioClip[(int)Tracks.TRACK_MAX];
-	float[] trackPitchOffsetMax     = new float[(int)Tracks.TRACK_MAX];
-	float[] trackOffsetMax          = new float[(int)Tracks.TRACK_MAX];
-	int[] numOffsetDudes            = new int[(int)Tracks.TRACK_MAX];
-	List<AudioSource> offsetSources = new List<AudioSource>();
-	float t                         = 0.0f;
-	float lastOffsetTime            = 0.0f;
+	List<AudioSource> sources         = new List<AudioSource>();
+	AudioClip[] tracks                = new AudioClip[(int)Tracks.TRACK_MAX];
+	float[] trackPitchOffsetMax       = new float[(int)Tracks.TRACK_MAX];
+	float[] trackOffsetMax            = new float[(int)Tracks.TRACK_MAX];
+	int[] numOffsetDudes              = new int[(int)Tracks.TRACK_MAX];
+	List<AudioSource> offsetSources   = new List<AudioSource>();
+	float t                           = 0.0f;
+	float lastOffsetTime              = 0.0f;
 	const int maxOffsetDudes          = 2;
 	const float maxTimeBetweenOffsets = 20.0f;
 	const float minTimeBetweenOffsets = 2.0f;
 	const float percentageChance      = 40.0f;
 	const float pitchOffset           = 0.01f;
+	bool enableOffsetting             = false;
 
 	ScoreManager scoreManager;
 
@@ -100,6 +101,11 @@ public class AudioManager
 		return num;
 	}
 
+	public void EnableOffsetting()
+	{
+		enableOffsetting = true;
+	}
+
 	public void Update()
 	{
 		float dt = Time.deltaTime;
@@ -112,8 +118,7 @@ public class AudioManager
 					str += numOffsetDudes[i] + " ";
 				Debug.Log(str);
 			}*/
-
-		if (offsetDudes < maxOffsetDudes && t >= lastOffsetTime + minTimeBetweenOffsets)
+		if (enableOffsetting && offsetDudes < maxOffsetDudes && t >= lastOffsetTime + minTimeBetweenOffsets)
 		{
 			// we can offset a dude!
 			if (t >= lastOffsetTime + maxTimeBetweenOffsets || Random.Range(0, 100) < percentageChance)
@@ -177,8 +182,6 @@ public class AudioManager
 					}
 					Debug.Log("Offset " + source + " @" + offset);
 					offsetSources.Add(source);
-					if (numOffsetDudes[track] > 0)
-						Debug.LogWarning("Wat?");
 					++numOffsetDudes[track];
 					lastOffsetTime = t;
 					scoreManager.onGotDesync(source.gameObject.GetInstanceID());
@@ -192,6 +195,12 @@ public class AudioManager
 			AudioSource source = offsetSources[i];
 			Tracks track = GetTrack(source);
 			if (track == Tracks.TRACK_MAX) continue;
+
+			if (source.pitch == 1.0f)
+			{
+				Vector3 pos = source.gameObject.transform.position;
+				Debug.DrawLine(pos, pos + new Vector3(10, 0, 0), Color.red);
+			}
 
 			float trackLength = (source.clip != null)? source.clip.length : 0;
 			AudioSource inSyncAudioSource = GetInSyncAudioSource(track);
