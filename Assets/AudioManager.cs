@@ -152,12 +152,12 @@ public class AudioManager
 					if ((screwWithThisOne.timeSamples & 1) == 1)
 					{
 						screwWithThisOne.pitch += offset;
-						source.gameObject.GetComponent<Animator>().speed += offset;
+						source.gameObject.GetComponent<AniStrip>().speedMultiplier += offset;
 					}
 					else
 					{
 						screwWithThisOne.pitch -= offset;
-						source.gameObject.GetComponent<Animator>().speed -= offset;
+						source.gameObject.GetComponent<AniStrip>().speedMultiplier -= offset;
 					}
 					Debug.Log("Offset " + source + " @" + offset);
 					offsetSources.Add(source);
@@ -185,7 +185,7 @@ public class AudioManager
 					// reset it
 					if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i] + " (wrap high)");
 					source.pitch = 1.0f;
-					source.gameObject.GetComponent<Animator>().speed = 1.0f;
+					source.gameObject.GetComponent<AniStrip>().speedMultiplier = 1.0f;
 				}
 			}
 			else if ((diff = inSyncAudioSource.time - trackOffsetMax[(int)track]) < 0.0f)
@@ -197,7 +197,7 @@ public class AudioManager
 					// reset it
 					if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i] + " (wrap low)");
 					source.pitch = 1.0f;
-					source.gameObject.GetComponent<Animator>().speed = 1.0f;
+					source.gameObject.GetComponent<AniStrip>().speedMultiplier = 1.0f;
 				}
 			}
 			else
@@ -207,7 +207,7 @@ public class AudioManager
 				{
 					if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i]);
 					source.pitch = 1.0f;
-					source.gameObject.GetComponent<Animator>().speed = 1.0f;
+					source.gameObject.GetComponent<AniStrip>().speedMultiplier = 1.0f;
 				}
 			}
 		}
@@ -219,13 +219,15 @@ public class AudioManager
 		Tracks track = GetTrack(source);
 		GameObject sourceGO = source.gameObject;
 		source.pitch = 1.0f;
-		sourceGO.GetComponent<Animator>().speed = 1.0f;
 
 		AudioSource inSyncAudioSource = GetInSyncAudioSource(track);
 		Debug.Log("With " + inSyncAudioSource);
-		Animator inSyncAnimator = inSyncAudioSource.gameObject.GetComponent<Animator>();
-		AnimatorStateInfo stateInfo = inSyncAnimator.GetCurrentAnimatorStateInfo(0);
-		sourceGO.GetComponent<Animator>().Play(stateInfo.nameHash, -1, stateInfo.normalizedTime);
+
+		AniStrip inSyncAni = inSyncAudioSource.gameObject.GetComponent<AniStrip>();
+		AniStrip outSyncAni = sourceGO.GetComponent<AniStrip>();
+		outSyncAni.speedMultiplier = 1.0f;
+		outSyncAni.CurFrame = inSyncAni.CurFrame;
+		outSyncAni.FrameOffsetTime = inSyncAni.FrameOffsetTime;
 
 		source.time = inSyncAudioSource.time;
 		--numOffsetDudes[(int)track];

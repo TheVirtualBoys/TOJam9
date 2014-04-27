@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  - 95: {fileID: 9500000}
   - 114: {fileID: 11400002}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400004}
@@ -70,22 +69,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
---- !u!95 &9500000
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,9 +84,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 13
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

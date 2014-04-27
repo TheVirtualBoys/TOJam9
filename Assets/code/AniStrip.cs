@@ -15,10 +15,14 @@ public class AniStrip : MonoBehaviour {
 	public Material mat;
 	public string texPropertyName;
 
-	public float nextFrame;
+	public int numFrames;
+
+	public float frameRate;
 
 	public int cellWidth;
 	public int cellHeight;
+
+	public float speedMultiplier;
 
 	private int numTilesWide;
 	private int numTilesHigh;
@@ -27,6 +31,9 @@ public class AniStrip : MonoBehaviour {
 	private float scaleH;
 
 	private int curFrame = 0;
+
+	private float dt;
+	private float timePerFrame;
 
 	void Awake()
 	{
@@ -59,6 +66,9 @@ public class AniStrip : MonoBehaviour {
 
 		renderer.material = mat;
 
+		timePerFrame = 1f / frameRate;
+
+		speedMultiplier = 1f;
 	}
 
 	public int CurFrame
@@ -69,7 +79,13 @@ public class AniStrip : MonoBehaviour {
 
 	public int NumFrames
 	{
-		get { return numTilesWide * numTilesHigh; }
+		get { return numFrames; }
+	}
+
+	public float FrameOffsetTime
+	{
+		get { return dt; }
+		set { dt = value; }
 	}
 
 	public Material AniMaterial
@@ -79,6 +95,9 @@ public class AniStrip : MonoBehaviour {
 
 	protected void setFrame(int frame)
 	{
+		if (frame >= NumFrames)
+			frame = frame % NumFrames;
+
 		int col = frame % numTilesWide;
 		int row = frame / numTilesWide;
 		mat.SetTextureOffset(texPropertyName, new Vector2(col * scaleW, (numTilesHigh - row - 1) * scaleH));
@@ -88,13 +107,19 @@ public class AniStrip : MonoBehaviour {
 
 	public void Update()
 	{
-		int next = 0;
-		if (NumFrames > 0)
-			next = (int)nextFrame % NumFrames;
-
-		if (next != curFrame)
+		dt += Time.deltaTime * speedMultiplier;
+		int framesToAdvance = 0;
+		while (dt > timePerFrame)
 		{
-			setFrame(next);
+			dt -= timePerFrame;
+			framesToAdvance++;
 		}
+
+		if (framesToAdvance > 0)
+		{
+			//Debug.Log("advancing " + framesToAdvance);
+			setFrame(curFrame + framesToAdvance);
+		}
+
 	}
 }

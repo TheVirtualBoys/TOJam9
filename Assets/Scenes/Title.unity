@@ -247,7 +247,6 @@ GameObject:
   - 33: {fileID: 203577427}
   - 23: {fileID: 203577425}
   - 114: {fileID: 203577424}
-  - 95: {fileID: 203577423}
   - 114: {fileID: 203577428}
   - 61: {fileID: 203577429}
   - 114: {fileID: 203577426}
@@ -269,21 +268,6 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 97633841}
---- !u!95 &203577423
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: f5719f68604095940941a0df8fe577a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1716677018}
-  m_GameObject: {fileID: 203577421}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &203577424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,9 +282,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 13
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &203577425
 Renderer:
   m_ObjectHideFlags: 0
@@ -366,7 +352,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!1001 &429853674
 Prefab:
@@ -511,9 +497,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &450788709
 Renderer:
   m_ObjectHideFlags: 0
@@ -643,9 +631,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: d3c502cddf7760840a180fe45d3e9379, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &493210702
 Renderer:
   m_ObjectHideFlags: 0
@@ -764,9 +754,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &532312340
 Renderer:
   m_ObjectHideFlags: 0
@@ -896,9 +888,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &566846975
 Renderer:
   m_ObjectHideFlags: 0
@@ -995,7 +989,6 @@ GameObject:
   - 33: {fileID: 579456808}
   - 23: {fileID: 579456806}
   - 114: {fileID: 579456805}
-  - 95: {fileID: 579456804}
   - 114: {fileID: 579456809}
   - 61: {fileID: 579456810}
   - 114: {fileID: 579456807}
@@ -1017,21 +1010,6 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 97633841}
---- !u!95 &579456804
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: f5719f68604095940941a0df8fe577a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1792275874}
-  m_GameObject: {fileID: 579456802}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &579456805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1046,9 +1024,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 13
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &579456806
 Renderer:
   m_ObjectHideFlags: 0
@@ -1114,7 +1094,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!1001 &652624340
 Prefab:
@@ -1267,7 +1247,6 @@ GameObject:
   - 33: {fileID: 737164034}
   - 23: {fileID: 737164032}
   - 114: {fileID: 737164036}
-  - 95: {fileID: 737164035}
   - 114: {fileID: 737164037}
   - 61: {fileID: 737164038}
   - 114: {fileID: 737164033}
@@ -1331,21 +1310,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 682677928}
   m_GameObject: {fileID: 737164030}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &737164035
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: f5719f68604095940941a0df8fe577a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 682677928}
-  m_GameObject: {fileID: 737164030}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &737164036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,9 +1324,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 13
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!114 &737164037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,7 +1352,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!1 &750404534
 GameObject:
@@ -1487,9 +1453,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: d3c502cddf7760840a180fe45d3e9379, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &750404541
 Renderer:
   m_ObjectHideFlags: 0
@@ -1866,9 +1834,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &944131867
 Renderer:
   m_ObjectHideFlags: 0
@@ -2042,9 +2012,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1100989917
 Renderer:
   m_ObjectHideFlags: 0
@@ -2248,9 +2220,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1208171241
 Renderer:
   m_ObjectHideFlags: 0
@@ -2493,9 +2467,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: d3c502cddf7760840a180fe45d3e9379, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1389170153
 Renderer:
   m_ObjectHideFlags: 0
@@ -2540,7 +2516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1442586114
 Transform:
   m_ObjectHideFlags: 0
@@ -2567,7 +2543,6 @@ GameObject:
   - 33: {fileID: 1466069746}
   - 23: {fileID: 1466069744}
   - 114: {fileID: 1466069743}
-  - 95: {fileID: 1466069742}
   - 114: {fileID: 1466069748}
   - 61: {fileID: 1466069749}
   - 114: {fileID: 1466069745}
@@ -2578,21 +2553,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1466069742
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: f5719f68604095940941a0df8fe577a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 577371623}
-  m_GameObject: {fileID: 1466069741}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a30c5565332e4ca4a83b7d13a519a495, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1466069743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2607,9 +2567,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 13
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1466069744
 Renderer:
   m_ObjectHideFlags: 0
@@ -2686,7 +2648,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!1001 &1470025490
 Prefab:
@@ -2746,7 +2708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1583302884
 Transform:
   m_ObjectHideFlags: 0
@@ -2978,7 +2940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1664916399
 Transform:
   m_ObjectHideFlags: 0
@@ -3008,7 +2970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1696830807
 Transform:
   m_ObjectHideFlags: 0
@@ -3255,9 +3217,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1762154041
 Renderer:
   m_ObjectHideFlags: 0
@@ -3322,6 +3286,10 @@ Prefab:
     - target: {fileID: 400000, guid: a1b917df0dfadcd40bfe689288f889aa, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a1b917df0dfadcd40bfe689288f889aa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1b917df0dfadcd40bfe689288f889aa, type: 2}
@@ -3427,9 +3395,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1787672442
 Renderer:
   m_ObjectHideFlags: 0
@@ -3592,9 +3562,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: d3c502cddf7760840a180fe45d3e9379, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 16
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1815377613
 Renderer:
   m_ObjectHideFlags: 0
@@ -3735,9 +3707,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1833157407
 Renderer:
   m_ObjectHideFlags: 0
@@ -3867,9 +3841,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1835774114
 Renderer:
   m_ObjectHideFlags: 0
@@ -3988,9 +3964,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1884655008
 Renderer:
   m_ObjectHideFlags: 0
@@ -4120,7 +4098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1892452101
 Animator:
   serializedVersion: 2
@@ -4150,9 +4128,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 933d71457b695514d94e96df84169dd3, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1892452103
 Renderer:
   m_ObjectHideFlags: 0
@@ -4337,9 +4317,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 0
+  frameRate: 0
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 0
 --- !u!23 &1949858586
 Renderer:
   m_ObjectHideFlags: 0
