@@ -5,9 +5,12 @@ using System.Collections.Generic;
 public class Main : MonoBehaviour
 {
 	public static AudioManager audioManager = null;
+	
+	public ScoreManager scoreManager;
+
 	void Awake()
 	{
-		audioManager = new AudioManager();
+		audioManager = new AudioManager(scoreManager);
 	}
 
 	// Use this for initialization

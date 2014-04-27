@@ -19,6 +19,8 @@ public class AudioManager
 	const float percentageChance      = 40.0f;
 	const float pitchOffset           = 0.01f;
 
+	ScoreManager scoreManager;
+
 	public enum Tracks
 	{
 		TRACK_NONE,
@@ -29,8 +31,10 @@ public class AudioManager
 		TRACK_MAX
 	}
 
-	public AudioManager()
+	public AudioManager(ScoreManager scoreManager)
 	{
+		this.scoreManager = scoreManager;
+
 		tracks[(int)Tracks.TRACK_NONE] = null;
 		tracks[(int)Tracks.TRACK_DRUM] = Resources.Load<AudioClip>("Drums_Loop");
 		tracks[(int)Tracks.TRACK_TUBA] = Resources.Load<AudioClip>("Tuba_Loop");
@@ -165,6 +169,7 @@ public class AudioManager
 					offsetSources.Add(source);
 					++numOffsetDudes[track];
 					lastOffsetTime = t;
+					scoreManager.onGotDesync(source.gameObject.GetInstanceID());
 				}
 			}
 		}
@@ -235,6 +240,8 @@ public class AudioManager
 		--numOffsetDudes[(int)track];
 		offsetSources.Remove(source);
 		lastOffsetTime = t;
+
+		scoreManager.onGotResync(sourceGO.GetInstanceID());
 	}
 
 	public void RemoveDesyncSource(AudioSource source)
