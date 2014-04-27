@@ -41,6 +41,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: 21300000, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300002, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300004, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300006, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300008, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300010, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300012, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300014, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300016, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
+  - {fileID: 21300018, guid: cdd3505f37f8e554a82c8a56ff3c50de, type: 3}
   running: 1
   iterations: 0
   destroyWhenFinished: 0
