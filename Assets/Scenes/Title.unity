@@ -283,10 +283,10 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   numFrames: 13
-  frameRate: 15
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &203577425
 Renderer:
   m_ObjectHideFlags: 0
@@ -409,7 +409,6 @@ GameObject:
   - 33: {fileID: 450788710}
   - 23: {fileID: 450788709}
   - 114: {fileID: 450788708}
-  - 95: {fileID: 450788707}
   - 114: {fileID: 450788706}
   - 61: {fileID: 450788705}
   - 114: {fileID: 450788704}
@@ -468,21 +467,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 2
---- !u!95 &450788707
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 18e53262899bc8e498daff957f8150a4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1591257829}
-  m_GameObject: {fileID: 450788702}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &450788708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,11 +481,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 5
+  frameRate: 7
   cellWidth: 16
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &450788709
 Renderer:
   m_ObjectHideFlags: 0
@@ -677,7 +661,6 @@ GameObject:
   - 33: {fileID: 532312341}
   - 23: {fileID: 532312340}
   - 114: {fileID: 532312339}
-  - 95: {fileID: 532312338}
   - 114: {fileID: 532312337}
   - 61: {fileID: 532312336}
   - 114: {fileID: 532312335}
@@ -725,21 +708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 1
---- !u!95 &532312338
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: d60ed475971483f40b8dff5a682f7c66,
-    type: 2}
-  m_PrefabInternal: {fileID: 42669502}
-  m_GameObject: {fileID: 532312334}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6be99aabf1f1d894eb836aeeaba7f198, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &532312339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,8 +722,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 8
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
@@ -811,7 +779,6 @@ GameObject:
   - 33: {fileID: 566846976}
   - 23: {fileID: 566846975}
   - 114: {fileID: 566846974}
-  - 95: {fileID: 566846973}
   - 114: {fileID: 566846972}
   - 61: {fileID: 566846971}
   - 114: {fileID: 566846970}
@@ -859,21 +826,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 1
---- !u!95 &566846973
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: d60ed475971483f40b8dff5a682f7c66,
-    type: 2}
-  m_PrefabInternal: {fileID: 1744789583}
-  m_GameObject: {fileID: 566846969}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6be99aabf1f1d894eb836aeeaba7f198, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &566846974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,8 +840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 8
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
@@ -1025,10 +977,10 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   numFrames: 13
-  frameRate: 15
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &579456806
 Renderer:
   m_ObjectHideFlags: 0
@@ -1325,10 +1277,10 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   numFrames: 13
-  frameRate: 15
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!114 &737164037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,7 +1698,6 @@ GameObject:
   - 33: {fileID: 944131868}
   - 23: {fileID: 944131867}
   - 114: {fileID: 944131866}
-  - 95: {fileID: 944131865}
   - 114: {fileID: 944131864}
   - 61: {fileID: 944131863}
   - 114: {fileID: 944131862}
@@ -1805,21 +1756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 2
---- !u!95 &944131865
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 18e53262899bc8e498daff957f8150a4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1716514731}
-  m_GameObject: {fileID: 944131860}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &944131866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1834,11 +1770,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 5
+  frameRate: 7
   cellWidth: 16
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &944131867
 Renderer:
   m_ObjectHideFlags: 0
@@ -1924,7 +1860,6 @@ GameObject:
   - 33: {fileID: 1100989918}
   - 23: {fileID: 1100989917}
   - 114: {fileID: 1100989916}
-  - 95: {fileID: 1100989915}
   - 114: {fileID: 1100989914}
   - 61: {fileID: 1100989913}
   - 114: {fileID: 1100989912}
@@ -1983,21 +1918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 3
---- !u!95 &1100989915
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 7115167b7af323d458276c5dec24c738,
-    type: 2}
-  m_PrefabInternal: {fileID: 51044871}
-  m_GameObject: {fileID: 1100989910}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 432eb91b380d5e0419263ea384a6232c, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1100989916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,11 +1932,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 11
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1100989917
 Renderer:
   m_ObjectHideFlags: 0
@@ -2143,7 +2063,6 @@ GameObject:
   - 33: {fileID: 1208171242}
   - 23: {fileID: 1208171241}
   - 114: {fileID: 1208171240}
-  - 95: {fileID: 1208171239}
   - 114: {fileID: 1208171238}
   - 61: {fileID: 1208171237}
   - 114: {fileID: 1208171236}
@@ -2191,21 +2110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 2
---- !u!95 &1208171239
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 18e53262899bc8e498daff957f8150a4,
-    type: 2}
-  m_PrefabInternal: {fileID: 2093895521}
-  m_GameObject: {fileID: 1208171235}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1208171240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,11 +2124,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 5
+  frameRate: 7
   cellWidth: 16
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1208171241
 Renderer:
   m_ObjectHideFlags: 0
@@ -2516,7 +2420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1442586114
 Transform:
   m_ObjectHideFlags: 0
@@ -2568,10 +2472,10 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   numFrames: 13
-  frameRate: 15
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1466069744
 Renderer:
   m_ObjectHideFlags: 0
@@ -2708,7 +2612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1583302884
 Transform:
   m_ObjectHideFlags: 0
@@ -2940,7 +2844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1664916399
 Transform:
   m_ObjectHideFlags: 0
@@ -3129,7 +3033,6 @@ GameObject:
   - 33: {fileID: 1762154042}
   - 23: {fileID: 1762154041}
   - 114: {fileID: 1762154040}
-  - 95: {fileID: 1762154039}
   - 114: {fileID: 1762154038}
   - 61: {fileID: 1762154037}
   - 114: {fileID: 1762154036}
@@ -3188,21 +3091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 2
---- !u!95 &1762154039
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 18e53262899bc8e498daff957f8150a4,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133544214}
-  m_GameObject: {fileID: 1762154034}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6a9eed03060b1245b3b47b3a49be24b, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1762154040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3217,11 +3105,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 97f60fbc32dcace46a4246d3175c5fd7, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 5
+  frameRate: 7
   cellWidth: 16
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1762154041
 Renderer:
   m_ObjectHideFlags: 0
@@ -3289,7 +3177,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a1b917df0dfadcd40bfe689288f889aa, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1b917df0dfadcd40bfe689288f889aa, type: 2}
@@ -3307,7 +3195,6 @@ GameObject:
   - 33: {fileID: 1787672443}
   - 23: {fileID: 1787672442}
   - 114: {fileID: 1787672441}
-  - 95: {fileID: 1787672440}
   - 114: {fileID: 1787672439}
   - 61: {fileID: 1787672438}
   - 114: {fileID: 1787672437}
@@ -3366,21 +3253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 3
---- !u!95 &1787672440
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 7115167b7af323d458276c5dec24c738,
-    type: 2}
-  m_PrefabInternal: {fileID: 1655400919}
-  m_GameObject: {fileID: 1787672435}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 432eb91b380d5e0419263ea384a6232c, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1787672441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3395,11 +3267,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 11
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1787672442
 Renderer:
   m_ObjectHideFlags: 0
@@ -3619,7 +3491,6 @@ GameObject:
   - 33: {fileID: 1833157408}
   - 23: {fileID: 1833157407}
   - 114: {fileID: 1833157406}
-  - 95: {fileID: 1833157405}
   - 114: {fileID: 1833157404}
   - 61: {fileID: 1833157403}
   - 114: {fileID: 1833157402}
@@ -3678,21 +3549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 3
---- !u!95 &1833157405
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 7115167b7af323d458276c5dec24c738,
-    type: 2}
-  m_PrefabInternal: {fileID: 669887236}
-  m_GameObject: {fileID: 1833157400}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 432eb91b380d5e0419263ea384a6232c, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1833157406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3707,11 +3563,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 11
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1833157407
 Renderer:
   m_ObjectHideFlags: 0
@@ -3753,7 +3609,6 @@ GameObject:
   - 33: {fileID: 1835774115}
   - 23: {fileID: 1835774114}
   - 114: {fileID: 1835774113}
-  - 95: {fileID: 1835774112}
   - 114: {fileID: 1835774111}
   - 61: {fileID: 1835774110}
   - 114: {fileID: 1835774109}
@@ -3812,21 +3667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 1
---- !u!95 &1835774112
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: d60ed475971483f40b8dff5a682f7c66,
-    type: 2}
-  m_PrefabInternal: {fileID: 429853674}
-  m_GameObject: {fileID: 1835774107}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6be99aabf1f1d894eb836aeeaba7f198, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1835774113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3841,8 +3681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 8
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0
@@ -3887,7 +3727,6 @@ GameObject:
   - 33: {fileID: 1884655009}
   - 23: {fileID: 1884655008}
   - 114: {fileID: 1884655007}
-  - 95: {fileID: 1884655006}
   - 114: {fileID: 1884655005}
   - 61: {fileID: 1884655004}
   - 114: {fileID: 1884655003}
@@ -3935,21 +3774,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 3
---- !u!95 &1884655006
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 7115167b7af323d458276c5dec24c738,
-    type: 2}
-  m_PrefabInternal: {fileID: 1470025490}
-  m_GameObject: {fileID: 1884655002}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 432eb91b380d5e0419263ea384a6232c, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1884655007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3964,11 +3788,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 0cd679d313dab0a4c86ac637c500f538, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 11
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1884655008
 Renderer:
   m_ObjectHideFlags: 0
@@ -4091,29 +3915,13 @@ GameObject:
   - 33: {fileID: 1892452104}
   - 23: {fileID: 1892452103}
   - 114: {fileID: 1892452102}
-  - 95: {fileID: 1892452101}
   m_Layer: 0
   m_Name: LeaderPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!95 &1892452101
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: a1b917df0dfadcd40bfe689288f889aa,
-    type: 2}
-  m_PrefabInternal: {fileID: 1774493334}
-  m_GameObject: {fileID: 1892452097}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec8cee7be69eae5499e4a94b79f57a22, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
+  m_IsActive: 1
 --- !u!114 &1892452102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4128,11 +3936,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 933d71457b695514d94e96df84169dd3, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 15
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!23 &1892452103
 Renderer:
   m_ObjectHideFlags: 0
@@ -4229,7 +4037,6 @@ GameObject:
   - 33: {fileID: 1949858587}
   - 23: {fileID: 1949858586}
   - 114: {fileID: 1949858585}
-  - 95: {fileID: 1949858584}
   - 114: {fileID: 1949858583}
   - 61: {fileID: 1949858582}
   - 114: {fileID: 1949858581}
@@ -4288,21 +4095,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 1
---- !u!95 &1949858584
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: d60ed475971483f40b8dff5a682f7c66,
-    type: 2}
-  m_PrefabInternal: {fileID: 3444464}
-  m_GameObject: {fileID: 1949858579}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6be99aabf1f1d894eb836aeeaba7f198, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &1949858585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4317,8 +4109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: bf9b7af18daa7944cb2bb076eef19d17, type: 2}
   texPropertyName: _MainTex
-  numFrames: 0
-  frameRate: 0
+  numFrames: 8
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
   speedMultiplier: 0

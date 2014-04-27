@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: LeaderPrefab
   m_TagString: Untagged
@@ -58,20 +57,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &9500000
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec8cee7be69eae5499e4a94b79f57a22, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,9 +70,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 933d71457b695514d94e96df84169dd3, type: 2}
   texPropertyName: _MainTex
-  nextFrame: 0
+  numFrames: 15
+  frameRate: 15
   cellWidth: 32
   cellHeight: 32
+  speedMultiplier: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

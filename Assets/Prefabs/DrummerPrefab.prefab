@@ -85,10 +85,10 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 1a6f87d8580bead4fa7fc97030dc6d38, type: 2}
   texPropertyName: _MainTex
   numFrames: 13
-  frameRate: 15
+  frameRate: 12
   cellWidth: 32
   cellHeight: 32
-  speedMultiplier: 0
+  speedMultiplier: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
