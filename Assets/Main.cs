@@ -8,6 +8,12 @@ public class Main : MonoBehaviour
 	AudioSource[] sources = new AudioSource[(int)AudioManager.Tracks.TRACK_MAX];
 	public ScoreManager scoreManager;
 	bool startedLevel = false;
+	public GameObject readyText = null;
+	public GameObject marchText = null;
+
+	GameObject ready = null;
+	GameObject march = null;
+
 
 	void Awake()
 	{
