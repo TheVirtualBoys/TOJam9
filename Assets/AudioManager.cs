@@ -60,11 +60,16 @@ public class AudioManager
 		return Tracks.TRACK_MAX;
 	}
 
+	public bool IsOffset(AudioSource source)
+	{
+		return offsetSources.Contains(source);
+	}
+
 	AudioSource GetInSyncAudioSource(Tracks track)
 	{
 		foreach (AudioSource source in sources)
 		{
-			if (!offsetSources.Contains(source)) return source;
+			if (source.clip == tracks[(int)track] && !offsetSources.Contains(source)) return source;
 		}
 		return null;
 	}
@@ -203,28 +208,8 @@ public class AudioManager
 					if (source.pitch != 1.0f) Debug.Log("done offsetting " + offsetSources[i]);
 					source.pitch = 1.0f;
 					source.gameObject.GetComponent<Animator>().speed = 1.0f;
-					// do something with the animation
 				}
 			}
-
-
-		}
-
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			Debug.Log("----------------------------------");
-			AudioSource[] temp = new AudioSource[offsetSources.Count];
-			offsetSources.CopyTo(temp);
-			foreach (AudioSource source in temp	)
-			{
-				ReSyncSource(source);
-			}
-
-			foreach (AudioSource source in temp)
-			{
-				RemoveDesyncSource(source);
-			}
-			lastOffsetTime = t;
 		}
 	}
 
@@ -243,13 +228,14 @@ public class AudioManager
 		sourceGO.GetComponent<Animator>().Play(stateInfo.nameHash, -1, stateInfo.normalizedTime);
 
 		source.time = inSyncAudioSource.time;
+		--numOffsetDudes[(int)track];
+		offsetSources.Remove(source);
+		lastOffsetTime = t;
 	}
 
 	public void RemoveDesyncSource(AudioSource source)
 	{
 		Tracks track = GetTrack(source);
 
-		--numOffsetDudes[(int)track];
-		offsetSources.Remove(source);
 	}
 }
