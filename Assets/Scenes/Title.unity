@@ -113,11 +113,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 203577422}
   - 33: {fileID: 203577427}
-  - 64: {fileID: 203577426}
   - 23: {fileID: 203577425}
   - 114: {fileID: 203577424}
   - 95: {fileID: 203577423}
   - 114: {fileID: 203577428}
+  - 61: {fileID: 203577429}
+  - 114: {fileID: 203577426}
   m_Layer: 0
   m_Name: Drummer2
   m_TagString: Untagged
@@ -190,20 +191,18 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
---- !u!64 &203577426
-MeshCollider:
+--- !u!114 &203577426
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: f5719f68604095940941a0df8fe577a7,
+  m_PrefabParentObject: {fileID: 11400004, guid: f5719f68604095940941a0df8fe577a7,
     type: 2}
   m_PrefabInternal: {fileID: 1716677018}
   m_GameObject: {fileID: 203577421}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &203577427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -225,6 +224,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 0
+--- !u!61 &203577429
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716677018}
+  m_GameObject: {fileID: 203577421}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &405358153
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,11 +327,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 579456803}
   - 33: {fileID: 579456808}
-  - 64: {fileID: 579456807}
   - 23: {fileID: 579456806}
   - 114: {fileID: 579456805}
   - 95: {fileID: 579456804}
   - 114: {fileID: 579456809}
+  - 61: {fileID: 579456810}
+  - 114: {fileID: 579456807}
   m_Layer: 0
   m_Name: Drummer4
   m_TagString: Untagged
@@ -393,20 +405,18 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
---- !u!64 &579456807
-MeshCollider:
+--- !u!114 &579456807
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: f5719f68604095940941a0df8fe577a7,
+  m_PrefabParentObject: {fileID: 11400004, guid: f5719f68604095940941a0df8fe577a7,
     type: 2}
   m_PrefabInternal: {fileID: 1792275874}
   m_GameObject: {fileID: 579456802}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &579456808
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -428,6 +438,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 0
+--- !u!61 &579456810
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1792275874}
+  m_GameObject: {fileID: 579456802}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &682677928
 Prefab:
   m_ObjectHideFlags: 0
@@ -485,11 +507,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 737164031}
   - 33: {fileID: 737164034}
-  - 64: {fileID: 737164033}
   - 23: {fileID: 737164032}
   - 114: {fileID: 737164036}
   - 95: {fileID: 737164035}
   - 114: {fileID: 737164037}
+  - 61: {fileID: 737164038}
+  - 114: {fileID: 737164033}
   m_Layer: 0
   m_Name: Drummer1
   m_TagString: Untagged
@@ -530,20 +553,18 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
---- !u!64 &737164033
-MeshCollider:
+--- !u!114 &737164033
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: f5719f68604095940941a0df8fe577a7,
+  m_PrefabParentObject: {fileID: 11400004, guid: f5719f68604095940941a0df8fe577a7,
     type: 2}
   m_PrefabInternal: {fileID: 682677928}
   m_GameObject: {fileID: 737164030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &737164034
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -597,6 +618,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 0
+--- !u!61 &737164038
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 682677928}
+  m_GameObject: {fileID: 737164030}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &835612120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,11 +1073,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 1466069747}
   - 33: {fileID: 1466069746}
-  - 64: {fileID: 1466069745}
   - 23: {fileID: 1466069744}
   - 114: {fileID: 1466069743}
   - 95: {fileID: 1466069742}
   - 114: {fileID: 1466069748}
+  - 61: {fileID: 1466069749}
+  - 114: {fileID: 1466069745}
   m_Layer: 0
   m_Name: Drummer3
   m_TagString: Untagged
@@ -1106,20 +1140,18 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
---- !u!64 &1466069745
-MeshCollider:
+--- !u!114 &1466069745
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: f5719f68604095940941a0df8fe577a7,
+  m_PrefabParentObject: {fileID: 11400004, guid: f5719f68604095940941a0df8fe577a7,
     type: 2}
   m_PrefabInternal: {fileID: 577371623}
   m_GameObject: {fileID: 1466069741}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2f38a3d71c32748a8ddc49911f009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &1466069746
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1152,6 +1184,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 0
+--- !u!61 &1466069749
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: f5719f68604095940941a0df8fe577a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 577371623}
+  m_GameObject: {fileID: 1466069741}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1601941255
 GameObject:
   m_ObjectHideFlags: 0
