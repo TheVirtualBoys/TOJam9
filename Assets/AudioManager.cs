@@ -21,6 +21,7 @@ public class AudioManager
 
 	public enum Tracks
 	{
+		TRACK_NONE,
 		TRACK_DRUM,
 		TRACK_TUBA,
 		TRACK_TRUMPET,
@@ -30,10 +31,11 @@ public class AudioManager
 
 	public AudioManager()
 	{
-		tracks[0] = Resources.Load<AudioClip>("Drums_Loop");
-		tracks[1] = Resources.Load<AudioClip>("Tuba_Loop");
-		tracks[2] = Resources.Load<AudioClip>("Trumpet_Loop");
-		tracks[3] = Resources.Load<AudioClip>("Flute_Loop");
+		tracks[(int)Tracks.TRACK_NONE] = null;
+		tracks[(int)Tracks.TRACK_DRUM] = Resources.Load<AudioClip>("Drums_Loop");
+		tracks[(int)Tracks.TRACK_TUBA] = Resources.Load<AudioClip>("Tuba_Loop");
+		tracks[(int)Tracks.TRACK_TRUMPET] = Resources.Load<AudioClip>("Trumpet_Loop");
+		tracks[(int)Tracks.TRACK_FLUTE] = Resources.Load<AudioClip>("Flute_Loop");
 		for (int i = 0; i < (int)Tracks.TRACK_MAX; ++i)
 		{
 			trackOffsetMax[i]      = 1.0f; // 2 seconds
@@ -174,7 +176,7 @@ public class AudioManager
 			Tracks track = GetTrack(source);
 			if (track == Tracks.TRACK_MAX) continue;
 
-			float trackLength = source.clip.length;
+			float trackLength = (source.clip != null)? source.clip.length : 0;
 			AudioSource inSyncAudioSource = GetInSyncAudioSource(track);
 			float diff = 0;
 			if ((diff = inSyncAudioSource.time + trackOffsetMax[(int)track] - trackLength) > 0.0f)
