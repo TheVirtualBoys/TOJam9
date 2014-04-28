@@ -7,7 +7,7 @@ Click desyncronised band members to get them back in sync!
 
 Max Blumish - Art
 
-Jason Canam - Design - http://www.jasoncanm.com
+Jason Canam - Design - http://www.jasoncanam.com
 
 Chris Regnier - Programming
 
